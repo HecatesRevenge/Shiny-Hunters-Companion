@@ -1,0 +1,7 @@
+URL for sprites:
+https://sprites.hecatesrevenge.com/sprites
+
+|----Organization----|
+after /sprites all images are sorted by generation
+EX: https://sprites.hecatesrevenge.com/sprites/gen1/0001_.png
+Each pokemon is labeled with the primary key for the database
