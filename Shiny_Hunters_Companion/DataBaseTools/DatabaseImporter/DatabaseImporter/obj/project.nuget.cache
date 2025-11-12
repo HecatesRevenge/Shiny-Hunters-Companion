@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gujb4V1B1DY=",
+  "success": true,
+  "projectFilePath": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\DataBaseTools\\DatabaseImporter\\DatabaseImporter\\DatabaseImporter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\edgar\\.nuget\\packages\\system.configuration.configurationmanager\\10.0.0\\system.configuration.configurationmanager.10.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\system.data.oledb\\10.0.0\\system.data.oledb.10.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.0\\system.diagnostics.eventlog.10.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\system.diagnostics.performancecounter\\10.0.0\\system.diagnostics.performancecounter.10.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.0\\system.security.cryptography.protecteddata.10.0.0.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\system.threading.accesscontrol\\10.0.0\\system.threading.accesscontrol.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
