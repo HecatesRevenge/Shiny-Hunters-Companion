@@ -26,7 +26,7 @@ public class DataImporter
         @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Database\ShinyHuntersCompanion.accdb";
 
     //Update to import pokemon from a csv file
-    private static string _csvFilePath = @"H:\3309\PokemonDataStuff\Gen1Pokemon.csv";
+    private static string _csvFilePath = @"H:\3309\PokemonDataStuff\CompletePokemonCSV.csv";
 
 
     private static Dictionary<string, int> _pokemonCache = new Dictionary<string, int>();
