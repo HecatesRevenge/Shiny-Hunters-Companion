@@ -1,0 +1,1 @@
+Contains all data for Pokemon including both text files and excel spreadsheets
