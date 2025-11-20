@@ -30,7 +30,7 @@ namespace Shiny_Hunters_Companion
                 BoxArtURL = reader["BoxArtURL"].ToString()
 
             };
-        
+
 
         }
 
@@ -77,9 +77,37 @@ namespace Shiny_Hunters_Companion
 
         public List<Game> GetAllGames()
         {
-            string strSQL = "SELECT * FROM Games ORDER BY ReleaseData";
+            string strSQL = @"
+                SELECT * 
+                FROM Games 
+                ORDER BY ReleaseDate";
             return DatabaseSelectQuery(strSQL);
         }
+
+        public Game GetGameDetails(int gameID)
+        {
+            string strSQL = @"
+                SELECT * 
+                FROM Games 
+                WHERE GameID = @GameID";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@GameID", gameID }
+            };
+
+            List<Game> results = DatabaseSelectQuery(strSQL, parameters);
+
+            if (results.Count > 0)
+            {
+                return results[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //TODO: UpdateGameDetails with API call to update game details in the database
 
 
 
