@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game.cs" />
+    <Compile Include="GameDB.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="PokemonDB.cs" />
     <Compile Include="Form1.cs">
