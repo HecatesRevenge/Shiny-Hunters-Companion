@@ -53,7 +53,7 @@
     <Compile Include="Data Access Layer\GameDB.cs" />
     <Compile Include="Data Classes\Hunt.cs" />
     <Compile Include="Data Classes\Method.cs" />
-    <Compile Include="Data Classes\PlayerModifer.cs" />
+    <Compile Include="Data Classes\PlayerModifier.cs" />
     <Compile Include="Data Classes\Pokemon.cs" />
     <Compile Include="Data Access Layer\PokemonDB.cs" />
     <Compile Include="Form1.cs">
@@ -63,6 +63,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Classes\PokemonForm.cs" />
+    <Compile Include="Data Access Layer\ModiferDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

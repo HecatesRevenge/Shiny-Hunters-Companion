@@ -15,11 +15,11 @@ namespace Shiny_Hunters_Companion
         public bool isActive { get; set; }
 
         //Holds all modifers that are active for this shiny hunt
-        public List<PlayerModifer> ActiveModifers { get; set; }
+        public List<PlayerModifier> ActiveModifers { get; set; }
 
         public Hunt()
         {
-            ActiveModifers = new List<PlayerModifer>();
+            ActiveModifers = new List<PlayerModifier>();
             TotalTime=TimeSpan.Zero;
         }
 
