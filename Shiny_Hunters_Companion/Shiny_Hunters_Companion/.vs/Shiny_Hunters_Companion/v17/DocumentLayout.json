@@ -7,11 +7,19 @@
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\source\\repos\\shiny_hunters_companion\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data classes\\hunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\source\\repos\\shiny_hunters_companion\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\source\\repos\\shiny_hunters_companion\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\modiferdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\modiferdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data classes\\hunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data classes\\hunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\source\\repos\\shiny_hunters_companion\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data classes\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data classes\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data classes\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 269,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,6 +55,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GameDB.cs",
+              "DocumentMoniker": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "ToolTip": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowGoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T18:26:55.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModiferDB.cs",
+              "DocumentMoniker": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\ModiferDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\ModiferDB.cs",
+              "ToolTip": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\ModiferDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\ModiferDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T18:26:45.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Hunt.cs",
               "DocumentMoniker": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
@@ -54,12 +88,11 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAA7wB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T00:41:08.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T00:41:08.243Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\Game.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Classes\\Game.cs",
@@ -67,8 +100,7 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Classes\\Game.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvxUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T00:40:16.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T00:40:16.431Z"
             },
             {
               "$type": "Document",
@@ -78,7 +110,7 @@
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
               "ToolTip": "C:\\Users\\Amelia\\source\\repos\\Shiny_Hunters_Companion\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T00:14:02.258Z",
               "EditorCaption": ""

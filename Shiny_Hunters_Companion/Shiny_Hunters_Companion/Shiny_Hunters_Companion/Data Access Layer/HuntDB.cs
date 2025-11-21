@@ -178,5 +178,70 @@ namespace Shiny_Hunters_Companion
                 return newID;
             }
         }
+
+        public List<Hunt> GetActiveHunts(int userID)
+        {
+            string strSQL = @"
+                SELECT *
+                FROM tblHunts
+                WHERE UserID_FK= @UserID AND IsActive=TRUE";
+            //Make sure this format is something I can use
+            var parameters = new Dictionary<string, object> { { "UserID", userID } };
+            return DatabaseSelectQuery(strSQL, parameters);
+        }
+
+        public Hunt GetHunt(int huntID)
+        {
+            string strSQL = @"
+                SELECT *
+                FROM tblHunts
+                WHERE HuntID=@HuntID";
+            var parameters = new Dictionary<string, object> { { "@HuntID", huntID } };
+            List<Hunt> results = DatabaseSelectQuery(strSQL, parameters);
+
+            if (results.Count > 0)
+            {
+                return results[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public int CreateHunt(Hunt newHunt)
+        {
+            string strSql = @"
+                INSERT INTO tblHunts 
+                (UserID_FK, GameID_FK, PokemonID_FK, MethodID_FK, EncounterCount, TotalTimeSeconds, IsActive) 
+                 VALUES (@UserID, @GameID, @PokemonID, @MethodID, @Count, @Time, @Active)
+                ";
+            var parameter = new Dictionary<string, object> {
+                {"@UserID",newHunt.UserID},
+                {"@GameID", newHunt.GameID },
+                {"@PokemonID", newHunt.PokemonID},
+                {"@MethodID", newHunt.MethodID},
+                {"@Count", newHunt.EncounterCount},
+                {"@Time", newHunt.TotalTimeSeconds},
+                {"@Active", newHunt.isActive }
+            };
+
+            return DataInsertWithTransaction(strSql, parameter, newHunt.ActiveModifiers);
+        }
+
+        public void UpdateHuntCount(int huntID, int count, int time)
+        {
+            string strSQL = @"
+                UPDATE tblHunts
+                SET EncounterCount=@Count, TotalTimeSeconds
+                =@Time WHERE HuntID=@HuntID";
+            var parameters = new Dictionary<string, object> {
+                {"@Count", count },
+                {"@Time", time},
+                {"@HuntID", huntID }
+            };
+            DatabaseNonQuery(strSQL, parameters);
+        }
     }
+
 }
