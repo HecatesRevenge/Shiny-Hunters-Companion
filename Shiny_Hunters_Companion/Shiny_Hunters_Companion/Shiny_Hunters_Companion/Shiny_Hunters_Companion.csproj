@@ -66,6 +66,7 @@
     <Compile Include="Data Access Layer\ModiferDB.cs" />
     <Compile Include="Data Access Layer\HuntDB.cs" />
     <Compile Include="Data Access Layer\GameMethodDB.cs" />
+    <Compile Include="Data Access Layer\MethodDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

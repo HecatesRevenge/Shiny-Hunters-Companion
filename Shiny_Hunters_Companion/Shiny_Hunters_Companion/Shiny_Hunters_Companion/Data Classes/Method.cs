@@ -10,6 +10,8 @@ namespace Shiny_Hunters_Companion
         public double BaseOdds { get; set; }
         public double OddsModifer { get; set; }
         public string Description { get; set; }
+
+        public Method() { }
         public Method(
             int methodID, 
             string methodName, 
