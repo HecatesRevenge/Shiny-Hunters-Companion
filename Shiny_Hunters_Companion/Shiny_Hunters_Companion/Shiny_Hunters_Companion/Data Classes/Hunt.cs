@@ -7,19 +7,24 @@ namespace Shiny_Hunters_Companion
     public class Hunt
     {
         public int HuntID { get; set; }
-        public Pokemon Pokemon { get; set; }
-        public Game Game { get; set; }
-        public Method Method { get; set; }
+        public int UserID { get; set; }
+        public int GameID { get; set; }
+        public int PokemonID { get; set; }
+        public int MethodID { get; set; }
         public int EncounterCount { get; set; }
-        public TimeSpan TotalTime { get; set; }
+        public int TotalTimeSeconds { get; set; }
         public bool isActive { get; set; }
+        public List<PlayerModifier> ActiveModifiers { get; set;}
 
-        //Holds all modifers that are active for this shiny hunt
-        public List<PlayerModifier> ActiveModifers { get; set; }
+        public TimeSpan TotalTime
+        {
+            get { return TimeSpan.FromSeconds(TotalTimeSeconds); }
+            set { TotalTimeSeconds = (int)value.TotalSeconds; }
+        }
 
         public Hunt()
         {
-            ActiveModifers = new List<PlayerModifier>();
+            ActiveModifiers = new List<PlayerModifier>();
             TotalTime=TimeSpan.Zero;
         }
 

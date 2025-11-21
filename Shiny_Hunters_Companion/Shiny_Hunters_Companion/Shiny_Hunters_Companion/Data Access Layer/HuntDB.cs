@@ -1,0 +1,182 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
+using System.Windows.Forms;
+
+namespace Shiny_Hunters_Companion
+{
+    public class HuntDB
+    {
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
+        private OleDbConnection myConnection;
+
+        public HuntDB()
+        {
+            myConnection = new OleDbConnection(connectionString);
+        }
+
+        private Hunt GetHuntFromReader(OleDbDataReader reader)
+        {
+            return new Hunt
+            {
+                HuntID = Convert.ToInt32(reader["HuntID"]),
+                UserID = Convert.ToInt32(reader["UserID_FK"]),
+                GameID = Convert.ToInt32(reader["GameID_FK"]),
+                PokemonID = Convert.ToInt32(reader["PokemonID_FK"]),
+                MethodID = Convert.ToInt32(reader["MethodID_FK"]),
+                EncounterCount = Convert.ToInt32(reader["EncounterCount"]),
+                TotalTimeSeconds = Convert.ToInt32(reader["TotalTimeSeconds"]),
+                isActive = Convert.ToBoolean(reader["isActive"])
+
+            };
+        }
+
+        private List<Hunt> DatabaseSelectQuery(string query, Dictionary<string, object> parameters = null)
+        {
+            List<Hunt> result = new List<Hunt>();
+            try
+            {
+                if (myConnection.State != ConnectionState.Open)
+                {
+                    myConnection.Open();
+                }
+
+                using (OleDbCommand command = new OleDbCommand(query, myConnection))
+                {
+                    if (parameters != null)
+                    {
+                        foreach (var p in parameters)
+                        {
+                            command.Parameters.AddWithValue(p.Key, p.Value);
+                        }
+                    }
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            result.Add(GetHuntFromReader(reader));
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database error (HuntDB: " + ex.Message);
+            }
+            finally
+            {
+                if (myConnection.State == ConnectionState.Open)
+                {
+                    myConnection.Close();
+                }
+            }
+            return result;
+        }
+
+        private int DatabaseNonQuery(string query, Dictionary<string, object> parameters = null)
+        {
+            int rows = 0;
+
+            try
+            {
+                if (myConnection.State != ConnectionState.Open)
+                {
+                    myConnection.Open();
+                }
+                using (OleDbCommand command = new OleDbCommand(query, myConnection))
+                {
+                    if (parameters != null)
+                    {
+                        foreach (var p in parameters)
+                        {
+                            command.Parameters.AddWithValue(p.Key, p.Value);
+                        }
+                    }
+                    rows = command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database error (HuntDB: " + ex.Message);
+            }
+            finally
+            {
+                if (myConnection.State == ConnectionState.Open)
+                {
+                    myConnection.Close();
+                }
+            }
+            return rows;
+        }
+
+        private int DataInsertWithTransaction(string insertSQL, Dictionary<string, object> parameters, List<PlayerModifier> modifers)
+        {
+            {
+                int newID = -1;
+                try
+                {
+                    if (myConnection.State != ConnectionState.Open)
+                    {
+                        myConnection.Open();
+                    }
+                    using (OleDbTransaction trans = myConnection.BeginTransaction())
+                    {
+                        try
+                        {
+                            using (OleDbCommand cmd = new OleDbCommand(insertSQL, myConnection, trans))
+                            {
+                                if (parameters != null)
+                                {
+                                    foreach (var p in parameters)
+                                    {
+                                        cmd.Parameters.AddWithValue(p.Key, p.Value);
+
+                                    }
+                                }
+                                cmd.CommandText = "SELECT @@IDENTITY";
+                                cmd.Parameters.Clear();
+                                newID = (int)cmd.ExecuteScalar();
+                            }
+
+                            if (modifers != null && modifers.Count > 0)
+                            {
+                                string modiferSQL = "INSERT INTO tblHuntModifiers (HuntID_FK, ModifierID_FK) VALUES (@HuntID, @ModID)";
+                                using (OleDbCommand modiferCommand = new OleDbCommand(modiferSQL, myConnection, trans))
+                                {
+                                    foreach (var m in modifers)
+                                    {
+                                        modiferCommand.Parameters.Clear();
+                                        modiferCommand.Parameters.AddWithValue("@HuntID", newID);
+                                        modiferCommand.Parameters.AddWithValue("@ModiferID", m.ModifierID);
+                                        modiferCommand.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+                            trans.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            trans.Rollback();
+                            throw;
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error inserting record: " + ex.Message);
+                    return -1;
+                }
+                finally
+                {
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Close();
+                    }
+                }
+                return newID;
+            }
+        }
+    }
+}
