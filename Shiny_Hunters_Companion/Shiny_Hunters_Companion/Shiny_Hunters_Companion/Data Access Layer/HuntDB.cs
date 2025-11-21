@@ -23,7 +23,7 @@ namespace Shiny_Hunters_Companion
                 HuntID = Convert.ToInt32(reader["HuntID"]),
                 UserID = Convert.ToInt32(reader["UserID_FK"]),
                 GameID = Convert.ToInt32(reader["GameID_FK"]),
-                PokemonID = Convert.ToInt32(reader["PokemonID_FK"]),
+                FormID = Convert.ToInt32(reader["PokemonID_FK"]),
                 MethodID = Convert.ToInt32(reader["MethodID_FK"]),
                 EncounterCount = Convert.ToInt32(reader["EncounterCount"]),
                 TotalTimeSeconds = Convert.ToInt32(reader["TotalTimeSeconds"]),
@@ -213,13 +213,13 @@ namespace Shiny_Hunters_Companion
         {
             string strSql = @"
                 INSERT INTO tblHunts 
-                (UserID_FK, GameID_FK, PokemonID_FK, MethodID_FK, EncounterCount, TotalTimeSeconds, IsActive) 
-                 VALUES (@UserID, @GameID, @PokemonID, @MethodID, @Count, @Time, @Active)
+                (UserID_FK, GameID_FK, FormID_FK, MethodID_FK, EncounterCount, TotalTimeSeconds, IsActive) 
+                 VALUES (@UserID, @GameID, @FormID, @MethodID, @Count, @Time, @Active)
                 ";
             var parameter = new Dictionary<string, object> {
                 {"@UserID",newHunt.UserID},
                 {"@GameID", newHunt.GameID },
-                {"@PokemonID", newHunt.PokemonID},
+                {"@FormID", newHunt.FormID},
                 {"@MethodID", newHunt.MethodID},
                 {"@Count", newHunt.EncounterCount},
                 {"@Time", newHunt.TotalTimeSeconds},
