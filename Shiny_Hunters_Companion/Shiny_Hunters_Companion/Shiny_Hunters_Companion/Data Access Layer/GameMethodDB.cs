@@ -12,7 +12,7 @@ namespace Shiny_Hunters_Companion
     public class GameMethodDB
     {
         private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
-        private OleDbConnection myConnection
+        private OleDbConnection myConnection;
 
         public GameMethodDB() {
             myConnection=new OleDbConnection(connectionString);
