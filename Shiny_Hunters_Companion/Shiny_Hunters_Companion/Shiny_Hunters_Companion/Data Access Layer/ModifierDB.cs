@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace Shiny_Hunters_Companion
 {
-    public class ModiferDB
+    public class ModifierDB
     {
         private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
         private OleDbConnection myConnection;
-        public ModiferDB()
+        public ModifierDB()
         {
             myConnection = new OleDbConnection(connectionString);
 
@@ -26,7 +26,7 @@ namespace Shiny_Hunters_Companion
                 ModifierID = Convert.ToInt32(reader["ModifierID"]),
                 ModifierName = reader["ModifierName"].ToString(),
                 OddsMultiplier = Convert.ToDouble(reader["OddsMultiplier"]),
-                ModiferDescription = reader["Description"].ToString()
+                ModiferDescription = reader["ModiferDescription"].ToString()
             };
         }
 

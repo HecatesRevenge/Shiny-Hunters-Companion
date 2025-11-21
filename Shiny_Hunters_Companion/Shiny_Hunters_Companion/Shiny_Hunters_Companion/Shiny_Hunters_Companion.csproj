@@ -63,7 +63,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Data Classes\PokemonForm.cs" />
-    <Compile Include="Data Access Layer\ModiferDB.cs" />
+    <Compile Include="Data Access Layer\ModifierDB.cs" />
     <Compile Include="Data Access Layer\HuntDB.cs" />
     <Compile Include="Data Access Layer\GameMethodDB.cs" />
     <Compile Include="Data Access Layer\MethodDB.cs" />

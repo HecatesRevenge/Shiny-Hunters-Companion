@@ -155,6 +155,37 @@ namespace Shiny_Hunters_Companion
 
         }
 
+        public List<PokemonForm> GetFormsByGameAndMethod(int gameID, int methodID)
+        {
+            strSql = @"
+            SELECT 
+                f.FormID, 
+                f.FormName, 
+                f.DisplayName, 
+                f.SpriteURL, 
+                p.PokemonID, 
+                p.PokedexNumber, 
+                p.BaseName
+            FROM 
+                ((tblPokemonForms AS f 
+                INNER JOIN tblPokemon AS p ON f.PokemonID_FK = p.PokemonID)
+                INNER JOIN tblEncounters AS e ON f.FormID = e.FormID)
+            WHERE 
+                e.GameID = @GameID 
+            AND 
+                e.MethodID = @MethodID
+            ORDER BY 
+                p.PokedexNumber, f.FormID";
+
+            var parameters = new Dictionary<string, object>
+            {
+                { "@GameID", gameID },
+                { "@MethodID", methodID }
+            };
+
+            return DatabaseSelectQuery(strSql, parameters);
+        }
+
         //TODO: Add a way to get pokemon from a game by gameID
         //Might need to add a way to insert into DB but this should work for now.
     }

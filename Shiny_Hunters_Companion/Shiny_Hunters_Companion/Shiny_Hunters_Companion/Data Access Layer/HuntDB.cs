@@ -233,8 +233,7 @@ namespace Shiny_Hunters_Companion
         {
             string strSQL = @"
                 UPDATE tblHunts
-                SET EncounterCount=@Count, TotalTimeSeconds
-                =@Time WHERE HuntID=@HuntID";
+                SET EncounterCount=@Count, TotalTimeSeconds=@Time WHERE HuntID=@HuntID";
             var parameters = new Dictionary<string, object> {
                 {"@Count", count },
                 {"@Time", time},
