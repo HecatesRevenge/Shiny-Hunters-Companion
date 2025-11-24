@@ -20,3 +20,7 @@ C:\Users\Amelia\source\repos\Shiny_Hunters_Companion\Shiny-Hunters-Companion\Shi
 C:\Users\Amelia\source\repos\Shiny_Hunters_Companion\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hu.DC8DF814.Up2Date
 C:\Users\Amelia\source\repos\Shiny_Hunters_Companion\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.exe
 C:\Users\Amelia\source\repos\Shiny_Hunters_Companion\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.pdb
+F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\System.Data.OleDb.dll
+F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\System.Data.OleDb.xml
+F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.exe.config
+F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hu.DC8DF814.Up2Date

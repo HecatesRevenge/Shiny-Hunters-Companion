@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AchievementDB.cs" />
+    <Compile Include="Data Access Layer\AchievementDB.cs" />
     <Compile Include="Data Classes\Achievement.cs" />
     <Compile Include="Data Classes\Game.cs" />
     <Compile Include="Data Access Layer\GameDB.cs" />
