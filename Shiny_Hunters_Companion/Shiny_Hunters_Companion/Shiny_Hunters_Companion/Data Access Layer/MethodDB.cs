@@ -22,7 +22,7 @@ namespace Shiny_Hunters_Companion
                 MethodID = Convert.ToInt32(reader["MethodID"]),
                 MethodName = reader["MethodName"].ToString(),
                 BaseOdds = Convert.ToInt32(reader["BaseOdds"]),
-                OddsModifer = Convert.ToInt32(reader["OddsModifer"]),
+                OddsModifier = Convert.ToInt32(reader["OddsModifier"]),
                 Description = reader["Description"].ToString(),
 
             };

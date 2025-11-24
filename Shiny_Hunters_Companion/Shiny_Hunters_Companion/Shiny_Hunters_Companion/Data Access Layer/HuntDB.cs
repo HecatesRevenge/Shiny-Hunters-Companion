@@ -110,7 +110,7 @@ namespace Shiny_Hunters_Companion
             return rows;
         }
 
-        private int DataInsertWithTransaction(string insertSQL, Dictionary<string, object> parameters, List<PlayerModifier> modifers)
+        private int DataInsertWithTransaction(string insertSQL, Dictionary<string, object> parameters, List<PlayerModifier> modifiers)
         {
             {
                 int newID = -1;
@@ -139,17 +139,17 @@ namespace Shiny_Hunters_Companion
                                 newID = (int)cmd.ExecuteScalar();
                             }
 
-                            if (modifers != null && modifers.Count > 0)
+                            if (modifiers != null && modifiers.Count > 0)
                             {
-                                string modiferSQL = "INSERT INTO tblHuntModifiers (HuntID_FK, ModifierID_FK) VALUES (@HuntID, @ModID)";
-                                using (OleDbCommand modiferCommand = new OleDbCommand(modiferSQL, myConnection, trans))
+                                string modifierSQL = "INSERT INTO tblHuntModifiers (HuntID_FK, ModifierID_FK) VALUES (@HuntID, @ModID)";
+                                using (OleDbCommand modifierCommand = new OleDbCommand(modifierSQL, myConnection, trans))
                                 {
-                                    foreach (var m in modifers)
+                                    foreach (var m in modifiers)
                                     {
-                                        modiferCommand.Parameters.Clear();
-                                        modiferCommand.Parameters.AddWithValue("@HuntID", newID);
-                                        modiferCommand.Parameters.AddWithValue("@ModiferID", m.ModifierID);
-                                        modiferCommand.ExecuteNonQuery();
+                                        modifierCommand.Parameters.Clear();
+                                        modifierCommand.Parameters.AddWithValue("@HuntID", newID);
+                                        modifierCommand.Parameters.AddWithValue("@ModifierID", m.ModifierID);
+                                        modifierCommand.ExecuteNonQuery();
                                     }
                                 }
                             }

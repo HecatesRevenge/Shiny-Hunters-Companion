@@ -79,7 +79,7 @@ namespace Shiny_Hunters_Companion
         {
             string strSQL = @"
                 SELECT * 
-                FROM Games 
+                FROM tblGames 
                 ORDER BY ReleaseDate";
             return DatabaseSelectQuery(strSQL);
         }
@@ -88,7 +88,7 @@ namespace Shiny_Hunters_Companion
         {
             string strSQL = @"
                 SELECT * 
-                FROM Games 
+                FROM tblGames 
                 WHERE GameID = @GameID";
             var parameters = new Dictionary<string, object>
             {

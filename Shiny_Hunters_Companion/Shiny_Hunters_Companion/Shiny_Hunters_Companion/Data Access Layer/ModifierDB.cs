@@ -18,7 +18,7 @@ namespace Shiny_Hunters_Companion
 
         }
 
-        private PlayerModifier GetPlayerModiferFromReader(OleDbDataReader reader)
+        private PlayerModifier GetPlayerModifierFromReader(OleDbDataReader reader)
         {
             return new PlayerModifier
             {
@@ -26,7 +26,7 @@ namespace Shiny_Hunters_Companion
                 ModifierID = Convert.ToInt32(reader["ModifierID"]),
                 ModifierName = reader["ModifierName"].ToString(),
                 OddsMultiplier = Convert.ToDouble(reader["OddsMultiplier"]),
-                ModiferDescription = reader["ModiferDescription"].ToString()
+                Description = reader["Description"].ToString()
             };
         }
 
@@ -45,7 +45,7 @@ namespace Shiny_Hunters_Companion
                     {
                         while (reader.Read())
                         {
-                            results.Add(GetPlayerModiferFromReader(reader));
+                            results.Add(GetPlayerModifierFromReader(reader));
                         }
                     }
                 }
@@ -65,13 +65,13 @@ namespace Shiny_Hunters_Companion
         }
 
 
-        public List<PlayerModifier> GetAllModifers()
+        public List<PlayerModifier> GetAllModifiers()
         {
 
             string strSQL = @"
                 SELECT * 
-                FROM tblModifers 
-                ORDER BY ModiferName";
+                FROM tblModifiers 
+                ORDER BY ModifierName";
             return DatabaseSelectQuery(strSQL);
         }
 

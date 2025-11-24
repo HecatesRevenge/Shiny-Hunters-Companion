@@ -142,7 +142,7 @@ namespace Shiny_Hunters_Companion
                 {"@FormID", formID }
             };
 
-           List<PokemonForm> results = DatabaseSelectQuery(strSql, parameters);
+            List<PokemonForm> results = DatabaseSelectQuery(strSql, parameters);
 
             if (results.Count > 0)
             {
@@ -155,35 +155,35 @@ namespace Shiny_Hunters_Companion
 
         }
 
-        public List<PokemonForm> GetFormsByGameAndMethod(int gameID, int methodID)
+        public List<PokemonForm> GetFormsByGameAndMethod(int gameId, int methodId)
         {
             strSql = @"
-            SELECT 
-                f.FormID, 
-                f.FormName, 
-                f.DisplayName, 
-                f.SpriteURL, 
-                p.PokemonID, 
-                p.PokedexNumber, 
-                p.BaseName
-            FROM 
-                ((tblPokemonForms AS f 
-                INNER JOIN tblPokemon AS p ON f.PokemonID_FK = p.PokemonID)
-                INNER JOIN tblEncounters AS e ON f.FormID = e.FormID)
-            WHERE 
-                e.GameID = @GameID 
-            AND 
-                e.MethodID = @MethodID
-            ORDER BY 
-                p.PokedexNumber, f.FormID";
+                SELECT 
+                    f.FormID, 
+                    f.FormName,
+                    f.DisplayName,
+                    f.SpriteURL,
+                    p.PokemonID, 
+                    p.PokedexNumber, 
+                    p.BaseName
+                FROM 
+                    ((tblPokemonForms AS f 
+                    INNER JOIN tblPokemon AS p ON f.PokemonID_FK = p.PokemonID)
+                    INNER JOIN tblEncounters AS e ON f.FormID = e.FormID_FK)
+                WHERE 
+                    e.GameID_FK = @GameID     
+                AND 
+                    e.MethodID_FK = @MethodID  
+                ORDER BY 
+                    p.PokedexNumber, f.FormID";
 
-            var parameters = new Dictionary<string, object>
-            {
-                { "@GameID", gameID },
-                { "@MethodID", methodID }
-            };
+                        var parameters = new Dictionary<string, object>
+                {
+                    { "@GameID", gameId },
+                    { "@MethodID", methodId }
+                };
 
-            return DatabaseSelectQuery(strSql, parameters);
+                        return DatabaseSelectQuery(strSql, parameters);
         }
 
         //TODO: Add a way to get pokemon from a game by gameID

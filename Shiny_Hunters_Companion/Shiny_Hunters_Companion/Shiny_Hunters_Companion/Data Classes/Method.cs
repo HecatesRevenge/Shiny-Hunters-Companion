@@ -8,7 +8,7 @@ namespace Shiny_Hunters_Companion
         public int MethodID { get; set; }
         public string MethodName { get; set; }
         public double BaseOdds { get; set; }
-        public double OddsModifer { get; set; }
+        public double OddsModifier { get; set; }
         public string Description { get; set; }
 
         public Method() { }
@@ -16,14 +16,14 @@ namespace Shiny_Hunters_Companion
             int methodID, 
             string methodName, 
             double baseOdds, 
-            double oddsModifer, 
+            double oddsModifier, 
             string description
             )
         {
             MethodID = methodID;
             MethodName = methodName;
             BaseOdds = baseOdds;
-            OddsModifer=oddsModifer;
+            OddsModifier = oddsModifier;
             Description = description;
         }
         public override string ToString()
