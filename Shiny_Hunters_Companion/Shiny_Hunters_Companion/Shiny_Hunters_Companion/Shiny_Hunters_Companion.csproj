@@ -52,7 +52,8 @@
   <ItemGroup>
     <Compile Include="Data Access Layer\AchievementDB.cs" />
     <Compile Include="Data Access Layer\DataAccessBase.cs" />
-    <Compile Include="Data Access Layer\SeedGames.cs" />
+    <Compile Include="Data Access Layer\Database Seeders\SeedGames.cs" />
+    <Compile Include="Data Access Layer\Database Seeders\SeedModifiers.cs" />
     <Compile Include="Data Classes\Achievement.cs" />
     <Compile Include="Data Classes\Game.cs" />
     <Compile Include="Data Access Layer\GameDB.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data Classes\User.cs" />
     <Compile Include="Data Access Layer\UserDB.cs" />
+    <Compile Include="Data Access Layer\Database Seeders\SeedMethods.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
