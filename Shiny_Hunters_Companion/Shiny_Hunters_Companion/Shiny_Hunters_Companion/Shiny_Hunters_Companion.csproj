@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Access Layer\AchievementDB.cs" />
+    <Compile Include="Data Access Layer\DataAccessBase.cs" />
+    <Compile Include="Data Access Layer\DatabaseSeeder.cs" />
     <Compile Include="Data Classes\Achievement.cs" />
     <Compile Include="Data Classes\Game.cs" />
     <Compile Include="Data Access Layer\GameDB.cs" />
