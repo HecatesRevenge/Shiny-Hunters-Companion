@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Data Access Layer\AchievementDB.cs" />
     <Compile Include="Data Access Layer\DataAccessBase.cs" />
+    <Compile Include="Data Access Layer\Database Seeders\SeedGameMethods.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGames.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedModifiers.cs" />
     <Compile Include="Data Classes\Achievement.cs" />

@@ -20,8 +20,7 @@ namespace Shiny_Hunters_Companion
         {
             myConnection = new OleDbConnection(connectionString);
             InitializeComponent();
-            SeedModifiers.Run();
-
+       \
 
         }
 
