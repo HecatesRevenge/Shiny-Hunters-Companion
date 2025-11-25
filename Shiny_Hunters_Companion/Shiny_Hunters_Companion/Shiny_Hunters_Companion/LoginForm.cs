@@ -86,6 +86,11 @@ namespace Shiny_Hunters_Companion
             }
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
