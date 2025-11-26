@@ -67,10 +67,10 @@
     <Compile Include="Data Access Layer\HuntDB.cs" />
     <Compile Include="Data Access Layer\GameMethodDB.cs" />
     <Compile Include="Data Access Layer\MethodDB.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="Interface\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
+    <Compile Include="Interface\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\LoginForm.cs">
@@ -84,7 +84,7 @@
     <Compile Include="Data Classes\User.cs" />
     <Compile Include="Data Access Layer\UserDB.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedMethods.cs" />
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="Interface\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\LoginForm.resx">
