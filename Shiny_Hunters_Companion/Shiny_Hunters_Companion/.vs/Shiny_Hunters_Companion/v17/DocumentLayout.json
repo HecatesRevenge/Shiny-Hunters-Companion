@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|f:\\downloads\\reactobjlist_sample\\reactobjlist_sample\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -11,24 +11,16 @@
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|f:\\downloads\\reactobjlist_sample\\reactobjlist_sample\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\methoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,11 +62,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 146,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\User.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Classes\\User.cs",
@@ -107,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Program.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Program.cs",
@@ -121,31 +113,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LoginForm.resx",
-              "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\LoginForm.resx",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\LoginForm.resx",
-              "ToolTip": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\LoginForm.resx",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\LoginForm.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-25T06:49:35.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginForm.Designer.cs",
-              "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\LoginForm.Designer.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\LoginForm.Designer.cs",
-              "ToolTip": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\LoginForm.Designer.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\LoginForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T06:49:32.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "UserDB.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
@@ -153,7 +120,8 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAIwDkAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T06:18:28.28Z"
+              "WhenOpened": "2025-11-25T06:18:28.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -163,7 +131,7 @@
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\LoginForm.cs",
               "ToolTip": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\LoginForm.cs",
               "RelativeToolTip": "Shiny_Hunters_Companion\\LoginForm.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAkwFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvzoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T05:25:40.823Z",
               "EditorCaption": ""
@@ -182,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "PokemonDB.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\PokemonDB.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\PokemonDB.cs",
@@ -194,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "ModifierDB.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\ModifierDB.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\ModifierDB.cs",
@@ -206,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "MethodDB.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\MethodDB.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\MethodDB.cs",
@@ -218,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "HuntDB.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
@@ -230,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "GameMethodDB.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameMethodDB.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\GameMethodDB.cs",
@@ -242,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "SeedGameMethods.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedGameMethods.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedGameMethods.cs",
@@ -254,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "SeedModifiers.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedModifiers.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedModifiers.cs",
@@ -266,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "SeedMethods.cs",
               "DocumentMoniker": "F:\\Downloads\\reactObjList_Sample\\reactObjList_Sample\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedMethods.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedMethods.cs",

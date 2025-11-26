@@ -63,9 +63,29 @@ namespace Shiny_Hunters_Companion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_a12w4ba12w4ba12w {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_a12w4ba12w4ba12w", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_k9h016k9h016k9h0 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_k9h016k9h016k9h0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoWithoutBackground {
+            get {
+                object obj = ResourceManager.GetObject("LogoWithoutBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

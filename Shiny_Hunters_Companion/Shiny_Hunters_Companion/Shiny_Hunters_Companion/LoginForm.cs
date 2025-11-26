@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shiny_Hunters_Companion
@@ -69,12 +62,13 @@ namespace Shiny_Hunters_Companion
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username=txtUsername.Text.Trim();
-            string password=txtPassword.Text.Trim();
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty (username) || string.IsNullOrEmpty(password)) 
-            {   lblError.Text = string.Empty; 
-                return; 
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                lblError.Text = string.Empty;
+                return;
             }
             if (userDb.RegisterUser(username, password))
             {
@@ -88,6 +82,11 @@ namespace Shiny_Hunters_Companion
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
 
         }
