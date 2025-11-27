@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -113,7 +114,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox1.Image = global::Shiny_Hunters_Companion.Properties.Resources.LogoWithoutBackground;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(332, 148);

@@ -45,8 +45,21 @@
             this.lblTotalEncounters = new System.Windows.Forms.Label();
             this.lblTotalShinies = new System.Windows.Forms.Label();
             this.grbOdds = new System.Windows.Forms.GroupBox();
-            this.lblCurrentOdds = new System.Windows.Forms.Label();
+            this.lblPercentile = new System.Windows.Forms.Label();
+            this.lblLuckStatus = new System.Windows.Forms.Label();
+            this.grbMilestones = new System.Windows.Forms.GroupBox();
+            this.lblMilestone99 = new System.Windows.Forms.Label();
+            this.lblMilestone90 = new System.Windows.Forms.Label();
+            this.lblMilestone50 = new System.Windows.Forms.Label();
+            this.grbHuntPace = new System.Windows.Forms.GroupBox();
+            this.lblSpeed = new System.Windows.Forms.Label();
+            this.lblEstTitle = new System.Windows.Forms.Label();
+            this.lblEstTime = new System.Windows.Forms.Label();
+            this.grpProb = new System.Windows.Forms.GroupBox();
             this.lblBaseOdds = new System.Windows.Forms.Label();
+            this.lblCurrentOdds = new System.Windows.Forms.Label();
+            this.progProb = new System.Windows.Forms.ProgressBar();
+            this.lblProbTitle = new System.Windows.Forms.Label();
             this.grbAchievements = new System.Windows.Forms.GroupBox();
             this.progAch3 = new System.Windows.Forms.ProgressBar();
             this.lblAch3 = new System.Windows.Forms.Label();
@@ -58,30 +71,17 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblProbTitle = new System.Windows.Forms.Label();
-            this.progProb = new System.Windows.Forms.ProgressBar();
-            this.grpProb = new System.Windows.Forms.GroupBox();
-            this.grbMilestones = new System.Windows.Forms.GroupBox();
-            this.lblMilestone50 = new System.Windows.Forms.Label();
-            this.lblEstTime = new System.Windows.Forms.Label();
-            this.lblEstTitle = new System.Windows.Forms.Label();
-            this.lblSpeed = new System.Windows.Forms.Label();
-            this.grbHuntPace = new System.Windows.Forms.GroupBox();
-            this.lblMilestone90 = new System.Windows.Forms.Label();
-            this.lblMilestone99 = new System.Windows.Forms.Label();
-            this.lblLuckStatus = new System.Windows.Forms.Label();
-            this.lblPercentile = new System.Windows.Forms.Label();
             this.grbActiveHunt.SuspendLayout();
             this.pnlTimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).BeginInit();
             this.grbStats.SuspendLayout();
             this.grbOdds.SuspendLayout();
+            this.grbMilestones.SuspendLayout();
+            this.grbHuntPace.SuspendLayout();
+            this.grpProb.SuspendLayout();
             this.grbAchievements.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
-            this.grpProb.SuspendLayout();
-            this.grbMilestones.SuspendLayout();
-            this.grbHuntPace.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -219,6 +219,7 @@
             this.picPokemonSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPokemonSprite.TabIndex = 0;
             this.picPokemonSprite.TabStop = false;
+            this.picPokemonSprite.Click += new System.EventHandler(this.picPokemonSprite_Click);
             // 
             // grbStats
             // 
@@ -268,6 +269,138 @@
             this.grbOdds.TabStop = false;
             this.grbOdds.Text = "Hunt Analysis";
             // 
+            // lblPercentile
+            // 
+            this.lblPercentile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPercentile.Location = new System.Drawing.Point(15, 320);
+            this.lblPercentile.Name = "lblPercentile";
+            this.lblPercentile.Size = new System.Drawing.Size(570, 35);
+            this.lblPercentile.TabIndex = 10;
+            this.lblPercentile.Text = "Slightly Lucky";
+            this.lblPercentile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLuckStatus
+            // 
+            this.lblLuckStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLuckStatus.Location = new System.Drawing.Point(21, 289);
+            this.lblLuckStatus.Name = "lblLuckStatus";
+            this.lblLuckStatus.Size = new System.Drawing.Size(570, 35);
+            this.lblLuckStatus.TabIndex = 8;
+            this.lblLuckStatus.Text = "Status:";
+            this.lblLuckStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // grbMilestones
+            // 
+            this.grbMilestones.Controls.Add(this.lblMilestone99);
+            this.grbMilestones.Controls.Add(this.lblMilestone90);
+            this.grbMilestones.Controls.Add(this.lblMilestone50);
+            this.grbMilestones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbMilestones.Location = new System.Drawing.Point(310, 140);
+            this.grbMilestones.Name = "grbMilestones";
+            this.grbMilestones.Size = new System.Drawing.Size(275, 130);
+            this.grbMilestones.TabIndex = 9;
+            this.grbMilestones.TabStop = false;
+            this.grbMilestones.Text = "Next Milestones";
+            // 
+            // lblMilestone99
+            // 
+            this.lblMilestone99.AutoSize = true;
+            this.lblMilestone99.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMilestone99.Location = new System.Drawing.Point(20, 90);
+            this.lblMilestone99.Name = "lblMilestone99";
+            this.lblMilestone99.Size = new System.Drawing.Size(141, 17);
+            this.lblMilestone99.TabIndex = 9;
+            this.lblMilestone99.Text = "99%: 2,300 left (15h)";
+            // 
+            // lblMilestone90
+            // 
+            this.lblMilestone90.AutoSize = true;
+            this.lblMilestone90.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMilestone90.Location = new System.Drawing.Point(20, 60);
+            this.lblMilestone90.Name = "lblMilestone90";
+            this.lblMilestone90.Size = new System.Drawing.Size(133, 17);
+            this.lblMilestone90.TabIndex = 8;
+            this.lblMilestone90.Text = "90%: 1,100 left (7h)";
+            // 
+            // lblMilestone50
+            // 
+            this.lblMilestone50.AutoSize = true;
+            this.lblMilestone50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMilestone50.Location = new System.Drawing.Point(20, 30);
+            this.lblMilestone50.Name = "lblMilestone50";
+            this.lblMilestone50.Size = new System.Drawing.Size(146, 17);
+            this.lblMilestone50.TabIndex = 7;
+            this.lblMilestone50.Text = "50%: Reached (0 left)";
+            // 
+            // grbHuntPace
+            // 
+            this.grbHuntPace.Controls.Add(this.lblSpeed);
+            this.grbHuntPace.Controls.Add(this.lblEstTitle);
+            this.grbHuntPace.Controls.Add(this.lblEstTime);
+            this.grbHuntPace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbHuntPace.Location = new System.Drawing.Point(15, 136);
+            this.grbHuntPace.Name = "grbHuntPace";
+            this.grbHuntPace.Size = new System.Drawing.Size(275, 130);
+            this.grbHuntPace.TabIndex = 8;
+            this.grbHuntPace.TabStop = false;
+            this.grbHuntPace.Text = "Hunting Pace";
+            // 
+            // lblSpeed
+            // 
+            this.lblSpeed.AutoSize = true;
+            this.lblSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpeed.Location = new System.Drawing.Point(20, 30);
+            this.lblSpeed.Name = "lblSpeed";
+            this.lblSpeed.Size = new System.Drawing.Size(122, 20);
+            this.lblSpeed.TabIndex = 7;
+            this.lblSpeed.Text = "Speed: 145/hr";
+            // 
+            // lblEstTitle
+            // 
+            this.lblEstTitle.AutoSize = true;
+            this.lblEstTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstTitle.ForeColor = System.Drawing.Color.Gray;
+            this.lblEstTitle.Location = new System.Drawing.Point(20, 70);
+            this.lblEstTitle.Name = "lblEstTitle";
+            this.lblEstTitle.Size = new System.Drawing.Size(139, 20);
+            this.lblEstTitle.TabIndex = 6;
+            this.lblEstTitle.Text = "Est. Time to Odds:";
+            this.lblEstTitle.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblEstTime
+            // 
+            this.lblEstTime.AutoSize = true;
+            this.lblEstTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstTime.Location = new System.Drawing.Point(20, 90);
+            this.lblEstTime.Name = "lblEstTime";
+            this.lblEstTime.Size = new System.Drawing.Size(87, 20);
+            this.lblEstTime.TabIndex = 6;
+            this.lblEstTime.Text = "4.2 Hours";
+            // 
+            // grpProb
+            // 
+            this.grpProb.Controls.Add(this.lblBaseOdds);
+            this.grpProb.Controls.Add(this.lblCurrentOdds);
+            this.grpProb.Controls.Add(this.progProb);
+            this.grpProb.Controls.Add(this.lblProbTitle);
+            this.grpProb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpProb.Location = new System.Drawing.Point(15, 30);
+            this.grpProb.Name = "grpProb";
+            this.grpProb.Size = new System.Drawing.Size(570, 100);
+            this.grpProb.TabIndex = 7;
+            this.grpProb.TabStop = false;
+            this.grpProb.Text = "Live Probability";
+            // 
+            // lblBaseOdds
+            // 
+            this.lblBaseOdds.AutoSize = true;
+            this.lblBaseOdds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaseOdds.Location = new System.Drawing.Point(20, 25);
+            this.lblBaseOdds.Name = "lblBaseOdds";
+            this.lblBaseOdds.Size = new System.Drawing.Size(134, 17);
+            this.lblBaseOdds.TabIndex = 2;
+            this.lblBaseOdds.Text = "Base Odds: 1/4,096";
+            // 
             // lblCurrentOdds
             // 
             this.lblCurrentOdds.AutoSize = true;
@@ -280,15 +413,23 @@
             this.lblCurrentOdds.Text = "Current Odds: 1/512";
             this.lblCurrentOdds.Click += new System.EventHandler(this.lblCurrentOdds_Click);
             // 
-            // lblBaseOdds
+            // progProb
             // 
-            this.lblBaseOdds.AutoSize = true;
-            this.lblBaseOdds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaseOdds.Location = new System.Drawing.Point(20, 25);
-            this.lblBaseOdds.Name = "lblBaseOdds";
-            this.lblBaseOdds.Size = new System.Drawing.Size(134, 17);
-            this.lblBaseOdds.TabIndex = 2;
-            this.lblBaseOdds.Text = "Base Odds: 1/4,096";
+            this.progProb.Location = new System.Drawing.Point(20, 70);
+            this.progProb.Name = "progProb";
+            this.progProb.Size = new System.Drawing.Size(530, 25);
+            this.progProb.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progProb.TabIndex = 5;
+            // 
+            // lblProbTitle
+            // 
+            this.lblProbTitle.AutoSize = true;
+            this.lblProbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProbTitle.Location = new System.Drawing.Point(20, 50);
+            this.lblProbTitle.Name = "lblProbTitle";
+            this.lblProbTitle.Size = new System.Drawing.Size(90, 17);
+            this.lblProbTitle.TabIndex = 4;
+            this.lblProbTitle.Text = "Probability:";
             // 
             // grbAchievements
             // 
@@ -402,146 +543,6 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Shiny Hunter\'s Companion";
             // 
-            // lblProbTitle
-            // 
-            this.lblProbTitle.AutoSize = true;
-            this.lblProbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProbTitle.Location = new System.Drawing.Point(20, 50);
-            this.lblProbTitle.Name = "lblProbTitle";
-            this.lblProbTitle.Size = new System.Drawing.Size(90, 17);
-            this.lblProbTitle.TabIndex = 4;
-            this.lblProbTitle.Text = "Probability:";
-            // 
-            // progProb
-            // 
-            this.progProb.Location = new System.Drawing.Point(20, 70);
-            this.progProb.Name = "progProb";
-            this.progProb.Size = new System.Drawing.Size(530, 25);
-            this.progProb.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progProb.TabIndex = 5;
-            // 
-            // grpProb
-            // 
-            this.grpProb.Controls.Add(this.lblBaseOdds);
-            this.grpProb.Controls.Add(this.lblCurrentOdds);
-            this.grpProb.Controls.Add(this.progProb);
-            this.grpProb.Controls.Add(this.lblProbTitle);
-            this.grpProb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpProb.Location = new System.Drawing.Point(15, 30);
-            this.grpProb.Name = "grpProb";
-            this.grpProb.Size = new System.Drawing.Size(570, 100);
-            this.grpProb.TabIndex = 7;
-            this.grpProb.TabStop = false;
-            this.grpProb.Text = "Live Probability";
-            // 
-            // grbMilestones
-            // 
-            this.grbMilestones.Controls.Add(this.lblMilestone99);
-            this.grbMilestones.Controls.Add(this.lblMilestone90);
-            this.grbMilestones.Controls.Add(this.lblMilestone50);
-            this.grbMilestones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbMilestones.Location = new System.Drawing.Point(310, 140);
-            this.grbMilestones.Name = "grbMilestones";
-            this.grbMilestones.Size = new System.Drawing.Size(275, 130);
-            this.grbMilestones.TabIndex = 9;
-            this.grbMilestones.TabStop = false;
-            this.grbMilestones.Text = "Next Milestones";
-            // 
-            // lblMilestone50
-            // 
-            this.lblMilestone50.AutoSize = true;
-            this.lblMilestone50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMilestone50.Location = new System.Drawing.Point(20, 30);
-            this.lblMilestone50.Name = "lblMilestone50";
-            this.lblMilestone50.Size = new System.Drawing.Size(146, 17);
-            this.lblMilestone50.TabIndex = 7;
-            this.lblMilestone50.Text = "50%: Reached (0 left)";
-            // 
-            // lblEstTime
-            // 
-            this.lblEstTime.AutoSize = true;
-            this.lblEstTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstTime.Location = new System.Drawing.Point(20, 90);
-            this.lblEstTime.Name = "lblEstTime";
-            this.lblEstTime.Size = new System.Drawing.Size(87, 20);
-            this.lblEstTime.TabIndex = 6;
-            this.lblEstTime.Text = "4.2 Hours";
-            // 
-            // lblEstTitle
-            // 
-            this.lblEstTitle.AutoSize = true;
-            this.lblEstTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstTitle.ForeColor = System.Drawing.Color.Gray;
-            this.lblEstTitle.Location = new System.Drawing.Point(20, 70);
-            this.lblEstTitle.Name = "lblEstTitle";
-            this.lblEstTitle.Size = new System.Drawing.Size(139, 20);
-            this.lblEstTitle.TabIndex = 6;
-            this.lblEstTitle.Text = "Est. Time to Odds:";
-            this.lblEstTitle.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblSpeed
-            // 
-            this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpeed.Location = new System.Drawing.Point(20, 30);
-            this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(122, 20);
-            this.lblSpeed.TabIndex = 7;
-            this.lblSpeed.Text = "Speed: 145/hr";
-            // 
-            // grbHuntPace
-            // 
-            this.grbHuntPace.Controls.Add(this.lblSpeed);
-            this.grbHuntPace.Controls.Add(this.lblEstTitle);
-            this.grbHuntPace.Controls.Add(this.lblEstTime);
-            this.grbHuntPace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbHuntPace.Location = new System.Drawing.Point(15, 136);
-            this.grbHuntPace.Name = "grbHuntPace";
-            this.grbHuntPace.Size = new System.Drawing.Size(275, 130);
-            this.grbHuntPace.TabIndex = 8;
-            this.grbHuntPace.TabStop = false;
-            this.grbHuntPace.Text = "Hunting Pace";
-            // 
-            // lblMilestone90
-            // 
-            this.lblMilestone90.AutoSize = true;
-            this.lblMilestone90.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMilestone90.Location = new System.Drawing.Point(20, 60);
-            this.lblMilestone90.Name = "lblMilestone90";
-            this.lblMilestone90.Size = new System.Drawing.Size(133, 17);
-            this.lblMilestone90.TabIndex = 8;
-            this.lblMilestone90.Text = "90%: 1,100 left (7h)";
-            // 
-            // lblMilestone99
-            // 
-            this.lblMilestone99.AutoSize = true;
-            this.lblMilestone99.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMilestone99.Location = new System.Drawing.Point(20, 90);
-            this.lblMilestone99.Name = "lblMilestone99";
-            this.lblMilestone99.Size = new System.Drawing.Size(141, 17);
-            this.lblMilestone99.TabIndex = 9;
-            this.lblMilestone99.Text = "99%: 2,300 left (15h)";
-            // 
-            // lblLuckStatus
-            // 
-            this.lblLuckStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLuckStatus.Location = new System.Drawing.Point(21, 289);
-            this.lblLuckStatus.Name = "lblLuckStatus";
-            this.lblLuckStatus.Size = new System.Drawing.Size(570, 35);
-            this.lblLuckStatus.TabIndex = 8;
-            this.lblLuckStatus.Text = "Status:";
-            this.lblLuckStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPercentile
-            // 
-            this.lblPercentile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPercentile.Location = new System.Drawing.Point(15, 320);
-            this.lblPercentile.Name = "lblPercentile";
-            this.lblPercentile.Size = new System.Drawing.Size(570, 35);
-            this.lblPercentile.TabIndex = 10;
-            this.lblPercentile.Text = "Slightly Lucky";
-            this.lblPercentile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,17 +565,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).EndInit();
             this.grbStats.ResumeLayout(false);
             this.grbOdds.ResumeLayout(false);
+            this.grbMilestones.ResumeLayout(false);
+            this.grbMilestones.PerformLayout();
+            this.grbHuntPace.ResumeLayout(false);
+            this.grbHuntPace.PerformLayout();
+            this.grpProb.ResumeLayout(false);
+            this.grpProb.PerformLayout();
             this.grbAchievements.ResumeLayout(false);
             this.grbAchievements.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
-            this.grpProb.ResumeLayout(false);
-            this.grpProb.PerformLayout();
-            this.grbMilestones.ResumeLayout(false);
-            this.grbMilestones.PerformLayout();
-            this.grbHuntPace.ResumeLayout(false);
-            this.grbHuntPace.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
