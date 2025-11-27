@@ -25,3 +25,17 @@ F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shi
 F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.exe.config
 F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hu.DC8DF814.Up2Date
 F:\Downloads\reactObjList_Sample\reactObjList_Sample\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.LoginForm.resources
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\Shiny_Hunters_Companion.exe.config
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\Shiny_Hunters_Companion.exe
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\Shiny_Hunters_Companion.pdb
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\System.Data.OleDb.dll
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\bin\Debug\System.Data.OleDb.xml
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.csproj.AssemblyReference.cache
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.Home.resources
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.LoginForm.resources
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.Properties.Resources.resources
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.csproj.GenerateResource.cache
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.csproj.CoreCompileInputs.cache
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hu.DC8DF814.Up2Date
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.exe
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.pdb
