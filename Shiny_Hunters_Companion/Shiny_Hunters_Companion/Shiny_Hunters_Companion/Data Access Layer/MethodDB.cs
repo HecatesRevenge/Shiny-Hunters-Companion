@@ -114,6 +114,24 @@ namespace Shiny_Hunters_Companion
             }
         }
 
+        public string GetMethodName(int methodID)
+        {
+            string resultName = "Unknow Method";
+            string strSQL = "SELECT MethodName FROM tblMethods WHERE MethodID";
 
+
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            OleDbCommand command = new OleDbCommand(strSQL, connection);
+
+            command.Parameters.AddWithValue("@ID", methodID);
+            connection.Open();
+
+            object result = command.ExecuteScalar();
+            if (result != null)
+            {
+                resultName = result.ToString();
+            }
+            return resultName;
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.grbActiveHunt = new System.Windows.Forms.GroupBox();
             this.btnCaught = new System.Windows.Forms.Button();
@@ -71,6 +72,11 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.huntTimer = new System.Windows.Forms.Timer(this.components);
+            this.dropDownMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.startNewHuntToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewShinyPokedexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbActiveHunt.SuspendLayout();
             this.pnlTimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).BeginInit();
@@ -82,6 +88,7 @@
             this.grbAchievements.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
+            this.dropDownMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,6 +98,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1084, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // grbActiveHunt
             // 
@@ -142,6 +150,7 @@
             this.btnToggleTimer.TabIndex = 2;
             this.btnToggleTimer.Text = "▶";
             this.btnToggleTimer.UseVisualStyleBackColor = true;
+            this.btnToggleTimer.Click += new System.EventHandler(this.btnToggleTimer_Click);
             // 
             // lblLapTimer
             // 
@@ -179,6 +188,7 @@
             this.btnIncrease.TabIndex = 4;
             this.btnIncrease.Text = "+";
             this.btnIncrease.UseVisualStyleBackColor = true;
+            this.btnIncrease.Click += new System.EventHandler(this.btnIncrease_Click);
             // 
             // btnDecrease
             // 
@@ -189,6 +199,7 @@
             this.btnDecrease.TabIndex = 3;
             this.btnDecrease.Text = "-";
             this.btnDecrease.UseVisualStyleBackColor = true;
+            this.btnDecrease.Click += new System.EventHandler(this.btnDecrease_Click);
             // 
             // lblMethod
             // 
@@ -522,6 +533,7 @@
             this.btnMenu.TabIndex = 5;
             this.btnMenu.Text = "▼ Menu";
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // picProfile
             // 
@@ -542,6 +554,40 @@
             this.lblTitle.Size = new System.Drawing.Size(259, 24);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Shiny Hunter\'s Companion";
+            // 
+            // huntTimer
+            // 
+            this.huntTimer.Interval = 1000;
+            this.huntTimer.Tick += new System.EventHandler(this.huntTimer_Tick);
+            // 
+            // dropDownMenu
+            // 
+            this.dropDownMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startNewHuntToolStripMenuItem,
+            this.viewShinyPokedexToolStripMenuItem,
+            this.logOutToolStripMenuItem});
+            this.dropDownMenu.Name = "dropDownMenu";
+            this.dropDownMenu.Size = new System.Drawing.Size(181, 92);
+            // 
+            // startNewHuntToolStripMenuItem
+            // 
+            this.startNewHuntToolStripMenuItem.Name = "startNewHuntToolStripMenuItem";
+            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startNewHuntToolStripMenuItem.Text = "Start New Hunt";
+            this.startNewHuntToolStripMenuItem.Click += new System.EventHandler(this.Menu_NewHunt_Click);
+            // 
+            // viewShinyPokedexToolStripMenuItem
+            // 
+            this.viewShinyPokedexToolStripMenuItem.Name = "viewShinyPokedexToolStripMenuItem";
+            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewShinyPokedexToolStripMenuItem.Text = "View Shiny Pokedex";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.Menu_LogOut_Click);
             // 
             // Home
             // 
@@ -576,6 +622,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
+            this.dropDownMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,5 +673,10 @@
         private System.Windows.Forms.Label lblMilestone99;
         private System.Windows.Forms.Label lblMilestone90;
         private System.Windows.Forms.Label lblPercentile;
+        private System.Windows.Forms.Timer huntTimer;
+        private System.Windows.Forms.ContextMenuStrip dropDownMenu;
+        private System.Windows.Forms.ToolStripMenuItem startNewHuntToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewShinyPokedexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }
