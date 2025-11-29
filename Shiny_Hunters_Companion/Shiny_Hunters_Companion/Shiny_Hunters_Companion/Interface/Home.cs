@@ -299,13 +299,13 @@ namespace Shiny_Hunters_Companion
 
         public void Menu_NewHunt_Click(object sender, EventArgs e)
         {
-            /*
-            Form2 frm = new Form2();
+            
+            NewHunt frm = new NewHunt();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                RefreshDashboard();
+                LoadMainDashboard();
             }
-            */
+            
         }
 
         public void Menu_LogOut_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace Shiny_Hunters_Companion
             };
         }
 
-        private List<PlayerModifier> DatabaseSelectQuery(string query)
+        private List<PlayerModifier> DatabaseSelectQuery(string query, Dictionary<string, object> parameters = null)
         {
             List<PlayerModifier> results = new List<PlayerModifier>();
             try
@@ -73,6 +73,23 @@ namespace Shiny_Hunters_Companion
                 FROM tblModifiers 
                 ORDER BY ModifierName";
             return DatabaseSelectQuery(strSQL);
+        }
+
+        public List<PlayerModifier> GetModifiersByGame(int gameID)
+        {
+            string strSQL = @"
+                SELECT m.* FROM tblModifiers AS m
+                INNER JOIN tblGameModifiers AS gm ON m.ModifierID = gm.ModifierID_FK
+                WHERE gm.GameID_FK = @GameID
+                ORDER BY m.ModifierName";
+
+            var parameters = new Dictionary<string, object>
+            {
+                { "@GameID", gameID }
+            };
+
+            return DatabaseSelectQuery(strSQL, parameters);
+
         }
 
     }

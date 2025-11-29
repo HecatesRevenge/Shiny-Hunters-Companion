@@ -567,25 +567,25 @@
             this.viewShinyPokedexToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.dropDownMenu.Name = "dropDownMenu";
-            this.dropDownMenu.Size = new System.Drawing.Size(181, 92);
+            this.dropDownMenu.Size = new System.Drawing.Size(180, 70);
             // 
             // startNewHuntToolStripMenuItem
             // 
             this.startNewHuntToolStripMenuItem.Name = "startNewHuntToolStripMenuItem";
-            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.startNewHuntToolStripMenuItem.Text = "Start New Hunt";
             this.startNewHuntToolStripMenuItem.Click += new System.EventHandler(this.Menu_NewHunt_Click);
             // 
             // viewShinyPokedexToolStripMenuItem
             // 
             this.viewShinyPokedexToolStripMenuItem.Name = "viewShinyPokedexToolStripMenuItem";
-            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.viewShinyPokedexToolStripMenuItem.Text = "View Shiny Pokedex";
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.Menu_LogOut_Click);
             // 
@@ -606,6 +606,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiny Hunter\'s Companion";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.grbActiveHunt.ResumeLayout(false);
             this.pnlTimer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).EndInit();

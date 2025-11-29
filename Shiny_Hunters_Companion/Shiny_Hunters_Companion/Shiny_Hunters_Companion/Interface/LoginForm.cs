@@ -36,6 +36,7 @@ namespace Shiny_Hunters_Companion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+           
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 

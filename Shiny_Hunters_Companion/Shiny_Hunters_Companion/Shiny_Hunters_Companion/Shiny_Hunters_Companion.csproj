@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Data Access Layer\AchievementDB.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGameMethods.cs" />
+    <Compile Include="Data Access Layer\Database Seeders\SeedGameModifiers.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGames.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedModifiers.cs" />
     <Compile Include="Data Classes\Achievement.cs" />
@@ -79,10 +80,10 @@
     <Compile Include="Interface\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewHunt.cs">
+    <Compile Include="Interface\NewHunt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewHunt.Designer.cs">
+    <Compile Include="Interface\NewHunt.Designer.cs">
       <DependentUpon>NewHunt.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -96,7 +97,7 @@
     <EmbeddedResource Include="Interface\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewHunt.resx">
+    <EmbeddedResource Include="Interface\NewHunt.resx">
       <DependentUpon>NewHunt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
