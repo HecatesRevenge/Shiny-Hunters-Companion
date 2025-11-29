@@ -16,5 +16,10 @@ namespace Shiny_Hunters_Companion
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

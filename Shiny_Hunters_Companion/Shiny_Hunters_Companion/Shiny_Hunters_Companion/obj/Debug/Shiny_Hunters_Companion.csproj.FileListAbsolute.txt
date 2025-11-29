@@ -39,3 +39,4 @@ C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Compani
 C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hu.DC8DF814.Up2Date
 C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.exe
 C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.pdb
+C:\Users\edgar\OneDrive\Documents\GitHub\Language_Learning\Shiny-Hunters-Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\Shiny_Hunters_Companion\obj\Debug\Shiny_Hunters_Companion.NewHunt.resources

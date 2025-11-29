@@ -90,6 +90,11 @@ namespace Shiny_Hunters_Companion
         {
 
         }
+
+        private void grpLogin_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

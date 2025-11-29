@@ -131,6 +131,7 @@
             this.grpLogin.Size = new System.Drawing.Size(310, 161);
             this.grpLogin.TabIndex = 8;
             this.grpLogin.TabStop = false;
+            this.grpLogin.Enter += new System.EventHandler(this.grpLogin_Enter);
             // 
             // LoginForm
             // 
