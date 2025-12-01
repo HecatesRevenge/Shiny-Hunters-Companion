@@ -254,6 +254,21 @@ namespace Shiny_Hunters_Companion
             };
             DatabaseNonQuery(strSQL, parameters);
         }
+
+        public void CompleteHunt(int huntID)
+        {
+            string strSQL = @"
+                UPDATE tblHunts 
+                SET IsActive = False 
+                WHERE HuntID = @HuntID";
+
+            var parameters = new Dictionary<string, object>
+            {
+                { "@HuntID", huntID }
+            };
+            DatabaseNonQuery(strSQL, parameters);
+        }
+
     }
 
 }

@@ -3,48 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\modifierdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\modifierdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedmodifiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedmodifiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\database seeders\\seedmodifiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedgamemodifiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedgamemodifiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\database seeders\\seedgamemodifiers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\amelia\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedgamemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedgamemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\database seeders\\seedgamemethods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\database seeders\\seedencounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\database seeders\\seedencounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -57,12 +53,12 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 146,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 269,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,6 +82,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cs",
+              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAIwIUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T22:22:01.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Home.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
@@ -99,53 +108,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.cs",
-              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAASwC8AAABQAAAAAAAAAA==",
+              "Title": "NewHunt.cs",
+              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T06:04:28.709Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ModifierDB.cs",
-              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\ModifierDB.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\ModifierDB.cs",
-              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\ModifierDB.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\ModifierDB.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAkwGgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T20:44:23.333Z",
+              "WhenOpened": "2025-12-01T20:35:07.692Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HuntDB.cs",
-              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
-              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
-              "ViewState": "AgIAALkAAAAAAAAAAAAowN0AAAA5AAAAAAAAAA==",
+              "Title": "NewHunt.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T21:14:28.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:12:04.902Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
               "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
               "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-01T20:29:17.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HuntDB.cs",
+              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAADwv6MAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T21:14:28.349Z",
               "EditorCaption": ""
             },
             {
@@ -158,8 +166,7 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedGameMethods.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T21:09:57.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T21:09:57.426Z"
             },
             {
               "$type": "Document",
@@ -171,21 +178,7 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedGameModifiers.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAADwv2YAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T21:09:58.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NewHunt.cs",
-              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAcwEQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T20:35:07.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T21:09:58.52Z"
             },
             {
               "$type": "Document",
@@ -197,8 +190,7 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedModifiers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T21:10:36.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T21:10:36.772Z"
             },
             {
               "$type": "Document",
@@ -210,23 +202,11 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\Database Seeders\\SeedEncounters.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAgwM8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-01T20:30:02.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-01T20:30:02.355Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "NewHunt.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "ToolTip": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:12:04.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
@@ -238,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Home.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Amelia\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.Designer.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\Home.Designer.cs",
@@ -246,13 +226,12 @@
               "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\Home.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T04:32:34.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T04:32:34.831Z"
             }
           ]
         },
         {
-          "DockedHeight": 200,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {

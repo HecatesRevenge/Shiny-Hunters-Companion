@@ -94,6 +94,29 @@ namespace Shiny_Hunters_Companion
             lstPokemon.SelectedIndex = -1;
         }
 
+        private void PreviewOdds()
+        {
+            if (cbMethods.SelectedItem == null)
+            {
+                lblPreviewOdds.Text = "Est. Odds: --";
+                return;
+            }
+
+            Method selectedMethod = (Method)cbMethods.SelectedItem;
+            double baseOdds = selectedMethod.BaseOdds;
+            double roll = 0;
+
+            foreach(PlayerModifier modifier in chkModifiers.CheckedItems)
+            {
+                if (modifier.OddsMultiplier > 1.0)
+                {
+                    roll += modifier.OddsMultiplier - 1.0;
+                }
+            }
+
+            double format=baseOdds/(1.0+roll);
+            lblPreviewOdds.Text= $"Est. Odds: 1/{Math.Round(format):N0}";
+        }
 
         private List<PlayerModifier> GetSelectModifiers()
         {
@@ -187,6 +210,9 @@ namespace Shiny_Hunters_Companion
             this.Close();
         }
 
-
+        private void chkModifiers_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            this.BeginInvoke(new Action(PreviewOdds));
+        }
     }
 }

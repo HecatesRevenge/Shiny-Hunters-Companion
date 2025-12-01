@@ -87,14 +87,7 @@ namespace Shiny_Hunters_Companion
             }
             else
             {
-                lblTargetPokemon.Text = "No Active Shiny Hunt";
-                lblMethod.Text = "Select 'New Hunt' from Menu";
-                lblEncounters.Text = "---";
-                lblBaseOdds.Text = "Base: --";
-                lblCurrentOdds.Text = "Current: --";
-                lblProbTitle.Text = "Current: --";
-                picPokemonSprite.Image = null;
-                EnableControls(false);
+                ClearDashBoard();
             }
 
         }
@@ -107,6 +100,28 @@ namespace Shiny_Hunters_Companion
             btnCaught.Enabled = enable;
         }
 
+        private void ClearDashBoard()
+        {
+            lblTargetPokemon.Text = "No Active Shiny Hunt";
+            lblMethod.Text = "Select 'New Hunt' from Menu";
+            lblEncounters.Text = "---";
+            lblBaseOdds.Text = "Base: --";
+            lblCurrentOdds.Text = "Current: --";
+            lblProbTitle.Text = "Current: --";
+            lblMilestone50.Text = "50%: ";
+            lblMilestone90.Text = "90%: ";
+            lblMilestone99.Text = "99%: ";
+            lblMilestone50.ForeColor = Color.Black;
+            lblMilestone90.ForeColor = Color.Black;
+            lblMilestone99.ForeColor = Color.Black;
+            lblLuckStatus.Text = "No Active Hunt";
+            picPokemonSprite.Image = null;
+            progProb.Visible= false;
+            EnableControls(false);
+           
+
+        }
+
         private void ProbabilityMath()
         {
             if (activeHunt == null)
@@ -116,21 +131,27 @@ namespace Shiny_Hunters_Companion
 
             double hours = activeHunt.TotalTimeSeconds / 3600.0;
             double speed = 0;
+            string estTimeText = "--";
             if (hours > 0.01)
             {
                 speed = activeHunt.EncounterCount / hours;
-                lblSpeed.Text = $"Speed: {speed}/ hr";
+                lblSpeed.Text = $"Speed: {speed:N0}/ hr";
+            }
+            else
+            {
+                lblSpeed.Text = "Speed: --/hr";
             }
 
             double p = GetOdds();
             double n = activeHunt.EncounterCount;
+            double oddsFormat = 1.0 / p;
 
             Method methodInfo = methodDB.GetMethodDetails(activeHunt.MethodID);
             lblBaseOdds.Text = $"Base: 1/{methodInfo.BaseOdds}";
-            lblCurrentOdds.Text = $"Current: 1/{Math.Round(1.0 / 0)}";
+            lblCurrentOdds.Text = $"Current: 1/{Math.Round(1.0 / p):N0}";
 
             double probability = 1.0 - (Math.Pow(1.0 - p, n));
-            lblProbTitle.Text = $"Current 1/{Math.Round(1.0 / p)}";
+            lblProbTitle.Text = $"Chance: {probability:P2}";
 
             int progVal = Convert.ToInt32(probability * 100);
             if (progVal > 100)
@@ -139,42 +160,67 @@ namespace Shiny_Hunters_Companion
             }
             progProb.Value = progVal;
 
+            double encountersRemain= oddsFormat - n;
 
-            /*TODO Change these values depending on what I want to display later on for 
-             * this section. These values act as a place holder for now. 
-             */
+            if (encountersRemain <= 0)
+            {
+                lblEstTime.Text = "Odds Reached";
+                lblEstTime.ForeColor = Color.Green;
+
+            } else if (speed > 0)
+            {
+                double hoursLeft = encountersRemain / speed;
+
+                if (hoursLeft < 1.0)
+                {
+                    lblEstTime.Text = $"{(hoursLeft * 60):N0} mins";
+                }
+                else
+                {
+                    lblEstTime.Text = $"{hoursLeft:N1} Hours";
+                }
+                lblEstTime.ForeColor = Color.Black;
+            } else {
+                lblEstTime.Text = "--";
+                lblEstTime.ForeColor = Color.Gray;
+            }
 
             int n50 = Convert.ToInt32(Math.Log(1 - 0.5) / Math.Log(1 - p));
             int n90 = Convert.ToInt32(Math.Log(1 - 0.9) / Math.Log(1 - p));
             int n99 = Convert.ToInt32(Math.Log(1 - 0.99) / Math.Log(1 - p));
 
 
-            //Display the milestones in the analysis section
-            if (n > 50)
+            if (n >= n50)
             {
                 lblMilestone50.Text = "50%: Reached";
+                lblMilestone50.ForeColor = Color.Green; 
             }
             else
             {
-                lblMilestone50.Text = $"50%: {n50 - n} left";
+                lblMilestone50.Text = $"50%: {n50 - n:N0} left";
+                lblMilestone50.ForeColor = Color.Black;
             }
 
-            if (n > 90)
+            if (n >= n90)
             {
-                lblMilestone50.Text = "90%: Reached";
+                lblMilestone90.Text = "90%: Reached";
+                lblMilestone90.ForeColor = Color.Green;
             }
             else
             {
-                lblMilestone50.Text = $"90%: {n90 - n} left";
+                lblMilestone90.Text = $"90%: {n90 - n:N0} left";
+                lblMilestone90.ForeColor = Color.Black;
             }
 
-            if (n > 99)
+            if (n >= n99)
             {
-                lblMilestone50.Text = "99%: Reached";
+                lblMilestone99.Text = "99%: Reached";
+                lblMilestone99.ForeColor = Color.Green;
             }
             else
             {
-                lblMilestone50.Text = $"99%: {n99 - n} left";
+                lblMilestone99.Text = $"99%: {n99 - n:N0} left";
+                lblMilestone99.ForeColor = Color.Black;
             }
 
             if (probability < 0.25)
@@ -211,11 +257,15 @@ namespace Shiny_Hunters_Companion
 
             double rolls = 0;
 
-            if (activeHunt.ActiveModifiers != null)
+            if ((activeHunt.ActiveModifiers != null)&&(activeHunt.ActiveModifiers.Count>0))
             {
                 foreach (var modifier in activeHunt.ActiveModifiers)
+                    if (modifier.OddsMultiplier > 1.0)
+                    {
+                        rolls +=( modifier.OddsMultiplier-1.0);
+                    }
                 {
-                    rolls += modifier.OddsMultiplier;
+                   
                 }
             }
             return ((1.0 + rolls) / baseOdds);
@@ -314,23 +364,41 @@ namespace Shiny_Hunters_Companion
 
         }
 
-        
-
         public void Menu_NewHunt_Click(object sender, EventArgs e)
         {
-            
+
             NewHunt frm = new NewHunt();
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadMainDashboard();
             }
-            
+
         }
 
         public void Menu_LogOut_Click(object sender, EventArgs e)
         {
             Program.CurrentUser = null;
             Application.Restart();
+        }
+
+        private void btnCaught_Click(object sender, EventArgs e)
+        {
+            if (activeHunt == null)
+            {
+                return;
+            }
+
+            var result = MessageBox.Show($"Shiny {lblTargetPokemon.Text} Caught!");
+            huntTimer.Stop();
+            btnToggleTimer.Text = "▶";
+            btnToggleTimer.BackColor = Color.LightGreen;
+
+            huntDB.UpdateHuntCount(activeHunt.HuntID, activeHunt.EncounterCount, activeHunt.TotalTimeSeconds);
+            huntDB.CompleteHunt(activeHunt.HuntID);
+            MessageBox.Show("Hunt Saved to History!");
+
+            ClearDashBoard();
+
         }
     }
 }
