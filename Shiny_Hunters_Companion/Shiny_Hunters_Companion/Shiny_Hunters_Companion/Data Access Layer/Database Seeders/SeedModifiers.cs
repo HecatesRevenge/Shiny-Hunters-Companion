@@ -16,87 +16,68 @@ namespace Shiny_Hunters_Companion
                 try
                 {
                     conn.Open();
+                    int modifiersAdded = 0;
 
-                    // DIAGNOSTIC: Check for the Table and Columns
-                    // We try to select one column at a time. If it fails, we know THAT name is wrong.
+                    var modifiers = new List<PlayerModifier>
+                    {
+                        // Standard Shiny Charm (Gen 5+, not PLA/Let's Go)
+                        new PlayerModifier(1, "Shiny Charm", 3.0, "Key Item that increases the chance of finding a Shiny Pokemon."),
+                        
+                        // PLA Shiny Charm (Different mechanics often warrant a separate entry or just treated as same ID if logic allows)
+                        new PlayerModifier(2, "Shiny Charm (PLA)", 3.0, "Increases shiny odds in Hisui. Requires Pokedex level 10 for all entries."),
+                        
+                        // Oval Charm (Gen 5+) - Increases egg production, technically not shiny odds but often tracked
+                        new PlayerModifier(3, "Oval Charm", 1.0, "Increases the chance of finding an Egg at the Nursery."),
+                        
+                        // Mark Charm (Gen 8+) - Increases mark chance, not shiny odds
+                        new PlayerModifier(4, "Mark Charm", 1.0, "Increases the chance of finding a Pokemon with a Mark."),
 
-                    // 1. Check Table Name (and ID)
-                    // If your table is named 'tblModifers' (missing i), change this line to match!
-                    string tableName = "tblModifiers";
+                        // Let's Go Lure
+                        new PlayerModifier(10, "Lure (Let's Go)", 2.0, "Increases shiny odds while active in Let's Go Pikachu/Eevee."),
 
-                    CheckColumn(conn, tableName, "ModifierID");
-                    CheckColumn(conn, tableName, "ModifierName");
-                    CheckColumn(conn, tableName, "OddsMultiplier"); // <--- Check spelling carefully!
-                    CheckColumn(conn, tableName, "Description");     // <--- Check if it's "ModifierDescription"
+                        // Scarlet/Violet Sandwiches (Sparkling Power)
+                        // Note: These add rolls (Lv1=+1, Lv2=+2, Lv3=+3). 
+                        // If your math logic is BaseOdds / Multiplier, Lv3 is roughly 4x odds (1 base + 3 rolls).
+                        new PlayerModifier(11, "Sparkling Power Lv. 1", 2.0, "Sandwich power. Adds 1 extra shiny roll."),
+                        new PlayerModifier(12, "Sparkling Power Lv. 2", 3.0, "Sandwich power. Adds 2 extra shiny rolls."),
+                        new PlayerModifier(13, "Sparkling Power Lv. 3", 4.0, "Sandwich power. Adds 3 extra shiny rolls."),
 
-                    // If diagnostics pass, run the real code...
-                    int count = 0;
-                    var items = new List<ModifierData>
-            {
-                new ModifierData(1, "Shiny Charm (Standard)", 3.0, "Key Item. Available in Gen 5+. Adds 2 extra shiny rolls."),
-                new ModifierData(2, "Shiny Charm (PLA)", 4.0, "Key Item. In Legends: Arceus, adds 3 extra rolls."),
-                new ModifierData(3, "Oval Charm", 1.0, "Key Item. Increases egg production speed."),
-                new ModifierData(4, "Mark Charm", 1.0, "Key Item. Increases chance of finding Marks."),
-                new ModifierData(10, "Lure (Let's Go)", 2.0, "Consumable. Adds 1 extra shiny roll."),
-                new ModifierData(11, "Sparkling Power Lv. 1 (SV)", 2.0, "Sandwich Power. Adds 1 extra shiny roll."),
-                new ModifierData(12, "Sparkling Power Lv. 2 (SV)", 3.0, "Sandwich Power. Adds 2 extra shiny rolls."),
-                new ModifierData(13, "Sparkling Power Lv. 3 (SV)", 4.0, "Sandwich Power. Adds 3 extra shiny rolls."),
-                new ModifierData(20, "Diglett Bonus (BDSP)", 2.0, "Active State. 40 Digletts doubles shiny odds."),
-                new ModifierData(21, "Lucky Power S (Gen 5)", 2.0, "Pass Power. Increases shiny rate of wild encounters.")
-            };
+                        // BDSP Diglett Bonus
+                        new PlayerModifier(20, "Diglett Bonus", 2.0, "Slightly increases shiny odds in the Grand Underground when 40 Digletts are collected."),
+
+                        // Gen 5 Pass Power
+                        new PlayerModifier(21, "Lucky Power", 1.5, "Pass Power that increases the chance of finding a Shiny Pokemon.")
+                    };
 
                     using (OleDbCommand cmd = new OleDbCommand("", conn))
                     {
-                        foreach (var item in items)
+                        foreach (var mod in modifiers)
                         {
                             // Check if exists
-                            cmd.CommandText = $"SELECT COUNT(*) FROM {tableName} WHERE ModifierID = @ID";
+                            cmd.CommandText = "SELECT COUNT(*) FROM tblModifiers WHERE ModifierID = @ID";
                             cmd.Parameters.Clear();
-                            cmd.Parameters.AddWithValue("@ID", item.ID);
+                            cmd.Parameters.AddWithValue("@ID", mod.ModifierID);
 
                             if ((int)cmd.ExecuteScalar() == 0)
                             {
-                                // Insert if new
-                                cmd.CommandText = $"INSERT INTO {tableName} (ModifierID, ModifierName, OddsMultiplier, Description) VALUES (@ID, @Name, @Mult, @Desc)";
+                                cmd.CommandText = "INSERT INTO tblModifiers (ModifierID, ModifierName, OddsMultiplier, Description) VALUES (@ID, @Name, @Odds, @Desc)";
                                 cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@ID", item.ID);
-                                cmd.Parameters.AddWithValue("@Name", item.Name);
-                                cmd.Parameters.AddWithValue("@Mult", item.Multi);
-                                cmd.Parameters.AddWithValue("@Desc", item.Desc);
+                                cmd.Parameters.AddWithValue("@ID", mod.ModifierID);
+                                cmd.Parameters.AddWithValue("@Name", mod.ModifierName);
+                                cmd.Parameters.AddWithValue("@Odds", mod.OddsMultiplier);
+                                cmd.Parameters.AddWithValue("@Desc", mod.Description);
                                 cmd.ExecuteNonQuery();
-                                count++;
+                                modifiersAdded++;
                             }
                         }
                     }
-                    MessageBox.Show($"Seeded {count} Modifiers.");
+                    MessageBox.Show($"Success! Added {modifiersAdded} new Modifiers.");
                 }
-                catch (Exception ex) { MessageBox.Show("Error Seeding Modifiers: " + ex.Message); }
-            }
-        }
-
-        // Helper to check columns
-        private static void CheckColumn(OleDbConnection conn, string table, string col)
-        {
-            try
-            {
-                using (OleDbCommand cmd = new OleDbCommand($"SELECT TOP 1 [{col}] FROM [{table}]", conn))
+                catch (Exception ex)
                 {
-                    cmd.ExecuteReader();
+                    MessageBox.Show("Error Seeding Modifiers: " + ex.Message);
                 }
-                System.Diagnostics.Debug.WriteLine($"[PASS] Column '{col}' found.");
             }
-            catch
-            {
-                System.Diagnostics.Debug.WriteLine($"!!! FAILURE !!! Column '{col}' is MISSING or MISSPELLED in table '{table}'.");
-                throw new Exception($"Fix the column: {col}");
-            }
-        }
-
-        private class ModifierData
-        {
-            public int ID; public string Name; public double Multi; public string Desc;
-            public ModifierData(int id, string name, double multi, string desc)
-            { ID = id; Name = name; Multi = multi; Desc = desc; }
         }
     }
 }

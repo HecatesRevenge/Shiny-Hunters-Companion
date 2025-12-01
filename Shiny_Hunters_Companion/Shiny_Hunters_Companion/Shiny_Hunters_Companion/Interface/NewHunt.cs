@@ -63,9 +63,12 @@ namespace Shiny_Hunters_Companion
             List<PlayerModifier> modifiers = modifierDB.GetModifiersByGame(gameID);
 
             chkModifiers.DataSource = null;
-            chkModifiers.DataSource = modifiers;
+
             chkModifiers.DisplayMember = "ModifierName";
-            chkModifiers.ValueMember = "ModifierID";
+            chkModifiers.ValueMember = "ModifierID"; 
+            chkModifiers.DataSource = modifiers;
+            
+            
 
 
             //Clear all values that were check by the user prior

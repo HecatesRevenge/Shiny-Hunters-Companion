@@ -45,7 +45,19 @@ namespace Shiny_Hunters_Companion
 
         private void LoadMainDashboard()
         {
-            activeHunt = huntDB.GetHunt(currentUser.UserID);
+            List<Hunt> activeHunts = huntDB.GetActiveHunts(currentUser.UserID); 
+
+
+            if (activeHunts.Count > 0) {
+                activeHunt=activeHunts[0];
+
+                activeHunt.ActiveModifiers = huntDB.GetModifiersForHunt(activeHunt.HuntID);
+                PokemonForm pokemon=pokemonDB.GetPokemonFormByID(activeHunt.HuntID);
+                lblTargetPokemon.Text=pokemon.DisplayName;
+                    
+                            
+            }
+
 
             if (activeHunt != null)
             {
@@ -61,6 +73,10 @@ namespace Shiny_Hunters_Companion
                 {
                     picPokemonSprite.LoadAsync(pokemonForm.SpriteURL);
                 }
+                else
+                {
+                    picPokemonSprite.Image = null;
+                }
 
                 TimeSpan time = TimeSpan.FromSeconds(activeHunt.TotalTimeSeconds);
                 lblTimer.Text = time.ToString(@"hh\:mm\:ss");
@@ -74,6 +90,9 @@ namespace Shiny_Hunters_Companion
                 lblTargetPokemon.Text = "No Active Shiny Hunt";
                 lblMethod.Text = "Select 'New Hunt' from Menu";
                 lblEncounters.Text = "---";
+                lblBaseOdds.Text = "Base: --";
+                lblCurrentOdds.Text = "Current: --";
+                lblProbTitle.Text = "Current: --";
                 picPokemonSprite.Image = null;
                 EnableControls(false);
             }

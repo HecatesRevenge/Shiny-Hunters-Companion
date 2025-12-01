@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-
 namespace Shiny_Hunters_Companion
 {
     public static class SeedGameModifiers
     {
         private static string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
+
         public static void Run()
         {
             using (OleDbConnection conn = new OleDbConnection(ConnectionString))
@@ -20,7 +20,7 @@ namespace Shiny_Hunters_Companion
 
                     // 1. Shiny Charm (Standard) - ID 1
                     // Available in Gen 5 (BW2), Gen 6, Gen 7, Gen 8 (SwSh, BDSP), Gen 9
-                    // NOT in: Gen 1-4, Let's Go, or PLA
+                    // Not in: Gen 1-4, Let's Go, or PLA
                     LinkModifierToGenerations(conn, 1, new[] { "Gen 6", "Gen 7", "Gen 9" }, ref linksAdded);
                     LinkModifierToGames(conn, 1, new[] { 19, 20, 31, 32, 34, 35 }, ref linksAdded); // BW2 + SwSh + BDSP
 
@@ -28,14 +28,12 @@ namespace Shiny_Hunters_Companion
                     LinkModifierToGames(conn, 2, new[] { 33 }, ref linksAdded); // Legends Arceus
 
                     // 3. Oval Charm - ID 3
-                    // Available Gen 5 (BW2) onwards
                     LinkModifierToGenerations(conn, 3, new[] { "Gen 6", "Gen 7", "Gen 9" }, ref linksAdded);
                     LinkModifierToGames(conn, 3, new[] { 19, 20, 31, 32, 34, 35 }, ref linksAdded);
 
                     // 4. Mark Charm - ID 4
-                    // Available Gen 8 (SwSh DLC), Gen 9
                     LinkModifierToGenerations(conn, 4, new[] { "Gen 9" }, ref linksAdded);
-                    LinkModifierToGames(conn, 4, new[] { 31, 32 }, ref linksAdded);
+                    LinkModifierToGames(conn, 4, new[] { 31, 32 }, ref linksAdded); // SwSh DLC included in base logic for now
 
                     // 10. Lure (Let's Go) - ID 10
                     LinkModifierToGames(conn, 10, new[] { 29, 30 }, ref linksAdded);
@@ -84,7 +82,6 @@ namespace Shiny_Hunters_Companion
                 foreach (int gameID in gameIds)
                 {
                     // Check if link exists
-                    // We assume table is 'tblGameModifiers'
                     cmd.CommandText = "SELECT COUNT(*) FROM tblGameModifiers WHERE GameID_FK = @GID AND ModifierID_FK = @MID";
                     cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@GID", gameID);

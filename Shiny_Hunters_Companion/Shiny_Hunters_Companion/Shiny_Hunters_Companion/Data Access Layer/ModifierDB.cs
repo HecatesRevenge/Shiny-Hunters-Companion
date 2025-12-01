@@ -1,5 +1,6 @@
 ﻿using Shiny_Hunters_Companion;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -41,6 +42,15 @@ namespace Shiny_Hunters_Companion
                 }
                 using (OleDbCommand command = new OleDbCommand(query, myConnection))
                 {
+
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                        {
+                            command.Parameters.AddWithValue(param.Key, param.Value);
+                        }
+                    }
+                
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -90,6 +100,20 @@ namespace Shiny_Hunters_Companion
 
             return DatabaseSelectQuery(strSQL, parameters);
 
+        }
+
+        public List<PlayerModifier> GetModifiersByHunt(int huntID)
+        {
+            string strSQL = @"
+                SELECT m.* FROM tblModifiers AS m
+                INNER JOIN tblHuntModifiers AS hm ON m.ModifierID = hm.ModifierID_FK
+                WHERE hm.HuntID_FK = @HuntID";
+
+            var parameters = new Dictionary<string, object>
+            {
+                {"@HuntID", huntID }
+            };
+            return DatabaseSelectQuery(strSQL,parameters);
         }
 
     }

@@ -124,22 +124,28 @@ namespace Shiny_Hunters_Companion
                     {
                         try
                         {
-                            using (OleDbCommand cmd = new OleDbCommand(insertSQL, myConnection, trans))
+                            using (OleDbCommand command = new OleDbCommand(insertSQL, myConnection, trans))
                             {
                                 if (parameters != null)
                                 {
                                     foreach (var p in parameters)
                                     {
-                                        cmd.Parameters.AddWithValue(p.Key, p.Value);
-
+                                        command.Parameters.AddWithValue(p.Key, p.Value);
                                     }
                                 }
-                                cmd.CommandText = "SELECT @@IDENTITY";
-                                cmd.Parameters.Clear();
-                                newID = (int)cmd.ExecuteScalar();
+
+
+                                command.ExecuteNonQuery();
+                              
+
+                                command.CommandText = "SELECT @@IDENTITY";
+                                command.Parameters.Clear();
+                                newID = (int)command.ExecuteScalar();
                             }
 
                             if (modifiers != null && modifiers.Count > 0)
+
+                                if (modifiers != null && modifiers.Count > 0)
                             {
                                 string modifierSQL = "INSERT INTO tblHuntModifiers (HuntID_FK, ModifierID_FK) VALUES (@HuntID, @ModID)";
                                 using (OleDbCommand modifierCommand = new OleDbCommand(modifierSQL, myConnection, trans))
@@ -184,7 +190,8 @@ namespace Shiny_Hunters_Companion
             string strSQL = @"
                 SELECT *
                 FROM tblHunts
-                WHERE UserID_FK= @UserID AND IsActive=TRUE";
+                WHERE UserID_FK= @UserID AND IsActive=TRUE
+                ORDER BY HuntID DESC";
             //Make sure this format is something I can use
             var parameters = new Dictionary<string, object> { { "UserID", userID } };
             return DatabaseSelectQuery(strSQL, parameters);
@@ -207,6 +214,12 @@ namespace Shiny_Hunters_Companion
             {
                 return null;
             }
+        }
+
+        public List<PlayerModifier> GetModifiersForHunt(int huntID)
+        {
+            ModifierDB modifierDB=new ModifierDB();
+            return modifierDB.GetModifiersByHunt(huntID);
         }
 
         public int CreateHunt(Hunt newHunt)
