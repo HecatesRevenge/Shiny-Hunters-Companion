@@ -23,7 +23,7 @@ namespace Shiny_Hunters_Companion
                 HuntID = Convert.ToInt32(reader["HuntID"]),
                 UserID = Convert.ToInt32(reader["UserID_FK"]),
                 GameID = Convert.ToInt32(reader["GameID_FK"]),
-                FormID = Convert.ToInt32(reader["PokemonID_FK"]),
+                FormID = Convert.ToInt32(reader["FormID_FK"]),
                 MethodID = Convert.ToInt32(reader["MethodID_FK"]),
                 EncounterCount = Convert.ToInt32(reader["EncounterCount"]),
                 TotalTimeSeconds = Convert.ToInt32(reader["TotalTimeSeconds"]),
@@ -148,7 +148,7 @@ namespace Shiny_Hunters_Companion
                                     {
                                         modifierCommand.Parameters.Clear();
                                         modifierCommand.Parameters.AddWithValue("@HuntID", newID);
-                                        modifierCommand.Parameters.AddWithValue("@ModifierID", m.ModifierID);
+                                        modifierCommand.Parameters.AddWithValue("@ModID", m.ModifierID);
                                         modifierCommand.ExecuteNonQuery();
                                     }
                                 }

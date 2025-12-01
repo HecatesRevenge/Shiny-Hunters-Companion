@@ -91,6 +91,7 @@
     <Compile Include="Data Classes\User.cs" />
     <Compile Include="Data Access Layer\UserDB.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedMethods.cs" />
+    <Compile Include="SeedEncounters.cs" />
     <EmbeddedResource Include="Interface\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

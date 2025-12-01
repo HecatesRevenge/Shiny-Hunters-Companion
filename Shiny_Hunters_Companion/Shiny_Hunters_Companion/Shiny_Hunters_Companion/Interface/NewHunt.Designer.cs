@@ -42,6 +42,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.gbModifiers = new System.Windows.Forms.GroupBox();
             this.chkModifiers = new System.Windows.Forms.CheckedListBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.grbSelectGame.SuspendLayout();
             this.gbMethod.SuspendLayout();
             this.gbPreview.SuspendLayout();
@@ -68,7 +70,7 @@
             this.cbGames.Name = "cbGames";
             this.cbGames.Size = new System.Drawing.Size(310, 28);
             this.cbGames.TabIndex = 0;
-            this.cbGames.SelectedIndexChanged += new System.EventHandler(this.cbgames_SelectedIndexChanged);
+            this.cbGames.SelectedIndexChanged += new System.EventHandler(this.cbGames_SelectedIndexChanged);
             // 
             // gbMethod
             // 
@@ -99,6 +101,7 @@
             this.cbMethods.Name = "cbMethods";
             this.cbMethods.Size = new System.Drawing.Size(310, 28);
             this.cbMethods.TabIndex = 0;
+            this.cbMethods.SelectedIndexChanged += new System.EventHandler(this.cbMethods_SelectedIndexChanged);
             // 
             // gbPreview
             // 
@@ -160,6 +163,7 @@
             this.lstPokemon.Name = "lstPokemon";
             this.lstPokemon.Size = new System.Drawing.Size(310, 44);
             this.lstPokemon.TabIndex = 3;
+            this.lstPokemon.SelectedIndexChanged += new System.EventHandler(this.lstPokemon_SelectedIndexChanged);
             // 
             // txtSearch
             // 
@@ -190,11 +194,37 @@
             this.chkModifiers.Size = new System.Drawing.Size(310, 70);
             this.chkModifiers.TabIndex = 0;
             // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(420, 560);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(200, 50);
+            this.btnStart.TabIndex = 4;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.LightPink;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(660, 560);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 50);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // NewHunt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 641);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.gbModifiers);
             this.Controls.Add(this.gbPokemonSelect);
             this.Controls.Add(this.gbPreview);
@@ -232,5 +262,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox gbModifiers;
         private System.Windows.Forms.CheckedListBox chkModifiers;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

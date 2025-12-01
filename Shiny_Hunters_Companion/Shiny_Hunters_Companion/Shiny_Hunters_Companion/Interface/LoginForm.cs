@@ -12,6 +12,7 @@ namespace Shiny_Hunters_Companion
         public LoginForm()
         {
             InitializeComponent();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,6 +94,11 @@ namespace Shiny_Hunters_Companion
         }
 
         private void grpLogin_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }

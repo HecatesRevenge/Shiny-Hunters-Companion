@@ -1,34 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\",
+  "WorkspaceRootPath": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\edgar\\onedrive\\documents\\github\\language_learning\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\edgar\\onedrive\\documents\\github\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\edgar\\onedrive\\documents\\github\\language_learning\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\interface\\newhunt.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\seedencounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\seedencounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\edgar\\onedrive\\documents\\github\\language_learning\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\pokemondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\pokemondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data classes\\pokemonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data classes\\pokemonform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\newhunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\edgar\\onedrive\\documents\\github\\language_learning\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\data access layer\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\huntdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|c:\\users\\edgar\\onedrive\\documents\\github\\language_learning\\shiny-hunters-companion\\shiny_hunters_companion\\shiny_hunters_companion\\shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data classes\\hunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data classes\\hunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\interface\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\shiny_hunters_companion\\data access layer\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F757-DFCB-4E5F-A58E-4112D3715C31}|Shiny_Hunters_Companion\\Shiny_Hunters_Companion.csproj|solutionrelative:shiny_hunters_companion\\data access layer\\gamedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,35 +62,33 @@
       "DocumentGroups": [
         {
           "DockedHeight": 146,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Home.cs",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
               "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\Home.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T21:01:26.078Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NewHunt.cs",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
               "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
               "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwDoAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-29T17:44:10.191Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -90,65 +112,133 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewHunt.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.Designer.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.Designer.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.Designer.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserDB.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\UserDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJUAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:57:37.817Z",
+              "WhenOpened": "2025-12-01T03:51:38.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NewHunt.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowDQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:44:08.744Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-01T02:40:55.647Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Home.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\Home.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs [Design]",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\Home.cs [Design]",
+              "Title": "SeedEncounters.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\SeedEncounters.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\SeedEncounters.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\SeedEncounters.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\SeedEncounters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T21:01:26.08Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-01T02:40:32.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameDB.cs",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "HuntDB.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\HuntDB.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAuwNkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:49:48.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T03:28:30.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Hunt.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Classes\\Hunt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T03:11:56.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T21:01:26.049Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Language_Learning\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\LoginForm.cs [Design]",
-              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\LoginForm.cs [Design]",
+              "Title": "PokemonForm.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\PokemonForm.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Classes\\PokemonForm.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Classes\\PokemonForm.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Classes\\PokemonForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T21:01:26.049Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-30T04:08:13.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PokemonDB.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\PokemonDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\PokemonDB.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\PokemonDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\PokemonDB.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAqwLoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T02:55:01.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NewHunt.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\NewHunt.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T02:49:04.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Interface\\Home.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Interface\\Home.cs [Design]",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Interface\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T21:01:26.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GameDB.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "RelativeDocumentMoniker": "Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "ToolTip": "C:\\Users\\edgar\\OneDrive\\Documents\\GitHub\\Shiny-Hunters-Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "RelativeToolTip": "Shiny_Hunters_Companion\\Data Access Layer\\GameDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T17:49:48.682Z"
             }
           ]
         }
