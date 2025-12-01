@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shiny_Hunters_Companion
@@ -20,6 +14,7 @@ namespace Shiny_Hunters_Companion
         private HuntDB huntDB = new HuntDB();
         private PokemonDB pokemonDB = new PokemonDB();
         private MethodDB methodDB = new MethodDB();
+        private GameDB gameDB = new GameDB();
 
         public Home()
         {
@@ -69,6 +64,9 @@ namespace Shiny_Hunters_Companion
                 //TODO look over this later
                 lblEncounters.Text = activeHunt.EncounterCount.ToString("N0");
 
+                Game gameInfo = gameDB.GetGameDetails(activeHunt.GameID);
+                lblGame.Text= "Game: " + gameInfo;
+
                 if (!string.IsNullOrEmpty(pokemonForm.SpriteURL))
                 {
                     picPokemonSprite.LoadAsync(pokemonForm.SpriteURL);
@@ -104,6 +102,7 @@ namespace Shiny_Hunters_Companion
         {
             lblTargetPokemon.Text = "No Active Shiny Hunt";
             lblMethod.Text = "Select 'New Hunt' from Menu";
+            lblGame.Text = "--";
             lblEncounters.Text = "---";
             lblBaseOdds.Text = "Base: --";
             lblCurrentOdds.Text = "Current: --";
@@ -276,10 +275,15 @@ namespace Shiny_Hunters_Companion
             {
                 return;
             }
+            if (activeHunt.EncounterCount==0)
+            {
+                huntTimer.Start();
+            }
             activeHunt.EncounterCount++;
             lblEncounters.Text = activeHunt.EncounterCount.ToString("N0");
             encounterSeconds = 0;
             lblLapTimer.Text = "00:00";
+
 
             ProbabilityMath();
             huntDB.UpdateHuntCount(activeHunt.HuntID, activeHunt.EncounterCount, activeHunt.TotalTimeSeconds);
@@ -398,6 +402,11 @@ namespace Shiny_Hunters_Companion
             MessageBox.Show("Hunt Saved to History!");
 
             ClearDashBoard();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

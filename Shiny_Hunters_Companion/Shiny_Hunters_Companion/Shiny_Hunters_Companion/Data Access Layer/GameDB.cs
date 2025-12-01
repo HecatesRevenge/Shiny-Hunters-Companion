@@ -107,10 +107,15 @@ namespace Shiny_Hunters_Companion
             }
         }
 
+       
+
+
+        }
+
         //TODO: UpdateGameDetails with API call to update game details in the database
 
 
 
     }
 
-}
+

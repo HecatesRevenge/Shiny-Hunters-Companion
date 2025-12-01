@@ -77,6 +77,7 @@
             this.startNewHuntToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewShinyPokedexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblGame = new System.Windows.Forms.Label();
             this.grbActiveHunt.SuspendLayout();
             this.pnlTimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).BeginInit();
@@ -103,6 +104,7 @@
             // 
             // grbActiveHunt
             // 
+            this.grbActiveHunt.Controls.Add(this.lblGame);
             this.grbActiveHunt.Controls.Add(this.btnCaught);
             this.grbActiveHunt.Controls.Add(this.pnlTimer);
             this.grbActiveHunt.Controls.Add(this.lblEncounters);
@@ -114,9 +116,9 @@
             this.grbActiveHunt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbActiveHunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbActiveHunt.Location = new System.Drawing.Point(53, 98);
-            this.grbActiveHunt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbActiveHunt.Margin = new System.Windows.Forms.Padding(4);
             this.grbActiveHunt.Name = "grbActiveHunt";
-            this.grbActiveHunt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbActiveHunt.Padding = new System.Windows.Forms.Padding(4);
             this.grbActiveHunt.Size = new System.Drawing.Size(533, 788);
             this.grbActiveHunt.TabIndex = 1;
             this.grbActiveHunt.TabStop = false;
@@ -126,7 +128,7 @@
             // 
             this.btnCaught.BackColor = System.Drawing.Color.Gold;
             this.btnCaught.Location = new System.Drawing.Point(27, 714);
-            this.btnCaught.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCaught.Margin = new System.Windows.Forms.Padding(4);
             this.btnCaught.Name = "btnCaught";
             this.btnCaught.Size = new System.Drawing.Size(480, 62);
             this.btnCaught.TabIndex = 0;
@@ -141,7 +143,7 @@
             this.pnlTimer.Controls.Add(this.lblLapTimer);
             this.pnlTimer.Controls.Add(this.lblTimer);
             this.pnlTimer.Location = new System.Drawing.Point(27, 615);
-            this.pnlTimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTimer.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTimer.Name = "pnlTimer";
             this.pnlTimer.Size = new System.Drawing.Size(480, 86);
             this.pnlTimer.TabIndex = 6;
@@ -151,7 +153,7 @@
             this.btnToggleTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToggleTimer.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnToggleTimer.Location = new System.Drawing.Point(373, 12);
-            this.btnToggleTimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnToggleTimer.Margin = new System.Windows.Forms.Padding(4);
             this.btnToggleTimer.Name = "btnToggleTimer";
             this.btnToggleTimer.Size = new System.Drawing.Size(67, 62);
             this.btnToggleTimer.TabIndex = 2;
@@ -193,7 +195,7 @@
             // 
             this.btnIncrease.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncrease.Location = new System.Drawing.Point(427, 542);
-            this.btnIncrease.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncrease.Margin = new System.Windows.Forms.Padding(4);
             this.btnIncrease.Name = "btnIncrease";
             this.btnIncrease.Size = new System.Drawing.Size(67, 62);
             this.btnIncrease.TabIndex = 4;
@@ -205,7 +207,7 @@
             // 
             this.btnDecrease.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecrease.Location = new System.Drawing.Point(40, 542);
-            this.btnDecrease.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDecrease.Margin = new System.Windows.Forms.Padding(4);
             this.btnDecrease.Name = "btnDecrease";
             this.btnDecrease.Size = new System.Drawing.Size(67, 62);
             this.btnDecrease.TabIndex = 3;
@@ -216,7 +218,7 @@
             // lblMethod
             // 
             this.lblMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMethod.Location = new System.Drawing.Point(27, 480);
+            this.lblMethod.Location = new System.Drawing.Point(27, 464);
             this.lblMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMethod.Name = "lblMethod";
             this.lblMethod.Size = new System.Drawing.Size(480, 37);
@@ -227,7 +229,7 @@
             // lblTargetPokemon
             // 
             this.lblTargetPokemon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetPokemon.Location = new System.Drawing.Point(27, 431);
+            this.lblTargetPokemon.Location = new System.Drawing.Point(27, 419);
             this.lblTargetPokemon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTargetPokemon.Name = "lblTargetPokemon";
             this.lblTargetPokemon.Size = new System.Drawing.Size(480, 49);
@@ -239,7 +241,7 @@
             // 
             this.picPokemonSprite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picPokemonSprite.Location = new System.Drawing.Point(67, 49);
-            this.picPokemonSprite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picPokemonSprite.Margin = new System.Windows.Forms.Padding(4);
             this.picPokemonSprite.Name = "picPokemonSprite";
             this.picPokemonSprite.Size = new System.Drawing.Size(399, 369);
             this.picPokemonSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,9 +256,9 @@
             this.grbStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbStats.Location = new System.Drawing.Point(613, 98);
-            this.grbStats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbStats.Margin = new System.Windows.Forms.Padding(4);
             this.grbStats.Name = "grbStats";
-            this.grbStats.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbStats.Padding = new System.Windows.Forms.Padding(4);
             this.grbStats.Size = new System.Drawing.Size(800, 148);
             this.grbStats.TabIndex = 2;
             this.grbStats.TabStop = false;
@@ -293,9 +295,9 @@
             this.grbOdds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbOdds.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbOdds.Location = new System.Drawing.Point(615, 271);
-            this.grbOdds.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbOdds.Margin = new System.Windows.Forms.Padding(4);
             this.grbOdds.Name = "grbOdds";
-            this.grbOdds.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbOdds.Padding = new System.Windows.Forms.Padding(4);
             this.grbOdds.Size = new System.Drawing.Size(800, 443);
             this.grbOdds.TabIndex = 3;
             this.grbOdds.TabStop = false;
@@ -330,9 +332,9 @@
             this.grbMilestones.Controls.Add(this.lblMilestone50);
             this.grbMilestones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbMilestones.Location = new System.Drawing.Point(413, 172);
-            this.grbMilestones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbMilestones.Margin = new System.Windows.Forms.Padding(4);
             this.grbMilestones.Name = "grbMilestones";
-            this.grbMilestones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbMilestones.Padding = new System.Windows.Forms.Padding(4);
             this.grbMilestones.Size = new System.Drawing.Size(367, 160);
             this.grbMilestones.TabIndex = 9;
             this.grbMilestones.TabStop = false;
@@ -378,9 +380,9 @@
             this.grbHuntPace.Controls.Add(this.lblEstTime);
             this.grbHuntPace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbHuntPace.Location = new System.Drawing.Point(20, 167);
-            this.grbHuntPace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbHuntPace.Margin = new System.Windows.Forms.Padding(4);
             this.grbHuntPace.Name = "grbHuntPace";
-            this.grbHuntPace.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbHuntPace.Padding = new System.Windows.Forms.Padding(4);
             this.grbHuntPace.Size = new System.Drawing.Size(367, 160);
             this.grbHuntPace.TabIndex = 8;
             this.grbHuntPace.TabStop = false;
@@ -429,9 +431,9 @@
             this.grpProb.Controls.Add(this.lblProbTitle);
             this.grpProb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpProb.Location = new System.Drawing.Point(20, 37);
-            this.grpProb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpProb.Margin = new System.Windows.Forms.Padding(4);
             this.grpProb.Name = "grpProb";
-            this.grpProb.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpProb.Padding = new System.Windows.Forms.Padding(4);
             this.grpProb.Size = new System.Drawing.Size(760, 123);
             this.grpProb.TabIndex = 7;
             this.grpProb.TabStop = false;
@@ -464,7 +466,7 @@
             // progProb
             // 
             this.progProb.Location = new System.Drawing.Point(27, 86);
-            this.progProb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progProb.Margin = new System.Windows.Forms.Padding(4);
             this.progProb.Name = "progProb";
             this.progProb.Size = new System.Drawing.Size(707, 31);
             this.progProb.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -492,9 +494,9 @@
             this.grbAchievements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbAchievements.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAchievements.Location = new System.Drawing.Point(613, 738);
-            this.grbAchievements.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbAchievements.Margin = new System.Windows.Forms.Padding(4);
             this.grbAchievements.Name = "grbAchievements";
-            this.grbAchievements.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbAchievements.Padding = new System.Windows.Forms.Padding(4);
             this.grbAchievements.Size = new System.Drawing.Size(800, 148);
             this.grbAchievements.TabIndex = 4;
             this.grbAchievements.TabStop = false;
@@ -503,7 +505,7 @@
             // progAch3
             // 
             this.progAch3.Location = new System.Drawing.Point(296, 111);
-            this.progAch3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progAch3.Margin = new System.Windows.Forms.Padding(4);
             this.progAch3.Name = "progAch3";
             this.progAch3.Size = new System.Drawing.Size(267, 25);
             this.progAch3.TabIndex = 9;
@@ -523,7 +525,7 @@
             // progAch2
             // 
             this.progAch2.Location = new System.Drawing.Point(293, 74);
-            this.progAch2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progAch2.Margin = new System.Windows.Forms.Padding(4);
             this.progAch2.Name = "progAch2";
             this.progAch2.Size = new System.Drawing.Size(267, 25);
             this.progAch2.TabIndex = 7;
@@ -543,7 +545,7 @@
             // progAch1
             // 
             this.progAch1.Location = new System.Drawing.Point(293, 37);
-            this.progAch1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progAch1.Margin = new System.Windows.Forms.Padding(4);
             this.progAch1.Name = "progAch1";
             this.progAch1.Size = new System.Drawing.Size(267, 25);
             this.progAch1.TabIndex = 5;
@@ -566,7 +568,7 @@
             this.panel1.Controls.Add(this.picProfile);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1467, 74);
             this.panel1.TabIndex = 0;
@@ -576,7 +578,7 @@
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMenu.Location = new System.Drawing.Point(1293, 12);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(133, 49);
             this.btnMenu.TabIndex = 5;
@@ -589,7 +591,7 @@
             this.picProfile.BackColor = System.Drawing.Color.Gray;
             this.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picProfile.Location = new System.Drawing.Point(1227, 12);
-            this.picProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picProfile.Margin = new System.Windows.Forms.Padding(4);
             this.picProfile.Name = "picProfile";
             this.picProfile.Size = new System.Drawing.Size(53, 49);
             this.picProfile.TabIndex = 1;
@@ -641,6 +643,18 @@
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.Menu_LogOut_Click);
             // 
+            // lblGame
+            // 
+            this.lblGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGame.Location = new System.Drawing.Point(27, 501);
+            this.lblGame.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGame.Name = "lblGame";
+            this.lblGame.Size = new System.Drawing.Size(480, 37);
+            this.lblGame.TabIndex = 7;
+            this.lblGame.Text = "Game:";
+            this.lblGame.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblGame.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -654,7 +668,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -732,5 +746,6 @@
         private System.Windows.Forms.ToolStripMenuItem startNewHuntToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewShinyPokedexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.Label lblGame;
     }
 }
