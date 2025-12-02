@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OleDb, Version=10.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -86,6 +89,12 @@
     <Compile Include="Interface\NewHunt.Designer.cs">
       <DependentUpon>NewHunt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ShinyPokedex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ShinyPokedex.Designer.cs">
+      <DependentUpon>ShinyPokedex.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data Classes\User.cs" />
@@ -100,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\NewHunt.resx">
       <DependentUpon>NewHunt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ShinyPokedex.resx">
+      <DependentUpon>ShinyPokedex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
