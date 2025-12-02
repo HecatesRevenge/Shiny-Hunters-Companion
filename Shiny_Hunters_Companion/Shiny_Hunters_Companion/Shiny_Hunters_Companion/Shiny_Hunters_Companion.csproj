@@ -72,6 +72,7 @@
     <Compile Include="Data Access Layer\HuntDB.cs" />
     <Compile Include="Data Access Layer\GameMethodDB.cs" />
     <Compile Include="Data Access Layer\MethodDB.cs" />
+    <Compile Include="Data Classes\UserShinyDex.cs" />
     <Compile Include="Interface\Home.cs">
       <SubType>Form</SubType>
     </Compile>
