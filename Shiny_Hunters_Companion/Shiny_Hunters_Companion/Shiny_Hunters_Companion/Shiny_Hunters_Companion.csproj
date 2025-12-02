@@ -58,6 +58,7 @@
     <Compile Include="Data Access Layer\Database Seeders\SeedGameModifiers.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGames.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedModifiers.cs" />
+    <Compile Include="Data Access Layer\UserPokedexDB.cs" />
     <Compile Include="Data Classes\Achievement.cs" />
     <Compile Include="Data Classes\Game.cs" />
     <Compile Include="Data Access Layer\GameDB.cs" />
