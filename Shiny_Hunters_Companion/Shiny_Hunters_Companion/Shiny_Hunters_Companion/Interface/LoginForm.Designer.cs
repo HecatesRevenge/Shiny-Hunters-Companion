@@ -77,6 +77,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(204, 24);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnLogin
@@ -103,13 +104,13 @@
             // 
             // lblError
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblError.Location = new System.Drawing.Point(23, 306);
+            this.lblError.Location = new System.Drawing.Point(0, 306);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 24);
+            this.lblError.Size = new System.Drawing.Size(334, 24);
             this.lblError.TabIndex = 7;
+            this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblError.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // pictureBox1

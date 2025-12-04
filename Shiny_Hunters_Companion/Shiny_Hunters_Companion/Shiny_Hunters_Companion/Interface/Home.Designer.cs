@@ -42,7 +42,6 @@
             this.btnDecrease = new System.Windows.Forms.Button();
             this.lblMethod = new System.Windows.Forms.Label();
             this.lblTargetPokemon = new System.Windows.Forms.Label();
-            this.picPokemonSprite = new System.Windows.Forms.PictureBox();
             this.grbStats = new System.Windows.Forms.GroupBox();
             this.lblTotalEncounters = new System.Windows.Forms.Label();
             this.lblTotalShinies = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.lblProbTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.picProfile = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.huntTimer = new System.Windows.Forms.Timer(this.components);
             this.dropDownMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -72,18 +70,20 @@
             this.viewShinyPokedexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.picProfile = new System.Windows.Forms.PictureBox();
+            this.picPokemonSprite = new System.Windows.Forms.PictureBox();
             this.grbActiveHunt.SuspendLayout();
             this.pnlTimer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).BeginInit();
             this.grbStats.SuspendLayout();
             this.grbOdds.SuspendLayout();
             this.grbMilestones.SuspendLayout();
             this.grbHuntPace.SuspendLayout();
             this.grpProb.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.dropDownMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -230,17 +230,6 @@
             this.lblTargetPokemon.TabIndex = 1;
             this.lblTargetPokemon.Text = "Target:";
             this.lblTargetPokemon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picPokemonSprite
-            // 
-            this.picPokemonSprite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picPokemonSprite.Location = new System.Drawing.Point(50, 40);
-            this.picPokemonSprite.Name = "picPokemonSprite";
-            this.picPokemonSprite.Size = new System.Drawing.Size(300, 300);
-            this.picPokemonSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picPokemonSprite.TabIndex = 0;
-            this.picPokemonSprite.TabStop = false;
-            this.picPokemonSprite.Click += new System.EventHandler(this.picPokemonSprite_Click);
             // 
             // grbStats
             // 
@@ -474,16 +463,6 @@
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // picProfile
-            // 
-            this.picProfile.BackColor = System.Drawing.Color.Gray;
-            this.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picProfile.Location = new System.Drawing.Point(920, 10);
-            this.picProfile.Name = "picProfile";
-            this.picProfile.Size = new System.Drawing.Size(40, 40);
-            this.picProfile.TabIndex = 1;
-            this.picProfile.TabStop = false;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -532,13 +511,34 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = global::Shiny_Hunters_Companion.Properties.Resources.LogoWithoutBackground;
-            this.pbLogo.Location = new System.Drawing.Point(460, 90);
+            this.pbLogo.Image = global::Shiny_Hunters_Companion.Properties.Resources.phillyLogo2;
+            this.pbLogo.Location = new System.Drawing.Point(479, 90);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(600, 119);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.Size = new System.Drawing.Size(546, 119);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo.TabIndex = 4;
             this.pbLogo.TabStop = false;
+            // 
+            // picProfile
+            // 
+            this.picProfile.BackColor = System.Drawing.Color.Gray;
+            this.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picProfile.Location = new System.Drawing.Point(920, 10);
+            this.picProfile.Name = "picProfile";
+            this.picProfile.Size = new System.Drawing.Size(40, 40);
+            this.picProfile.TabIndex = 1;
+            this.picProfile.TabStop = false;
+            // 
+            // picPokemonSprite
+            // 
+            this.picPokemonSprite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picPokemonSprite.Location = new System.Drawing.Point(50, 40);
+            this.picPokemonSprite.Name = "picPokemonSprite";
+            this.picPokemonSprite.Size = new System.Drawing.Size(300, 300);
+            this.picPokemonSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPokemonSprite.TabIndex = 0;
+            this.picPokemonSprite.TabStop = false;
+            this.picPokemonSprite.Click += new System.EventHandler(this.picPokemonSprite_Click);
             // 
             // Home
             // 
@@ -560,7 +560,6 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.grbActiveHunt.ResumeLayout(false);
             this.pnlTimer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).EndInit();
             this.grbStats.ResumeLayout(false);
             this.grbOdds.ResumeLayout(false);
             this.grbMilestones.ResumeLayout(false);
@@ -571,9 +570,10 @@
             this.grpProb.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.dropDownMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
