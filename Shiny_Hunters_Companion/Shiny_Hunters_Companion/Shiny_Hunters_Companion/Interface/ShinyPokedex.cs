@@ -176,9 +176,9 @@ namespace Shiny_Hunters_Companion
         }
         private void OpenDetailView(string pokemonName)
         {
-            ShinyPokedex dexForm = new ShinyPokedex();
-            dexForm.LoadPokemonByName(pokemonName);
-            dexForm.Show();
+           ShinyDexDetails detailsForm = new ShinyDexDetails();
+              detailsForm.LoadPokemonByName(pokemonName);
+            detailsForm.Show();
         }
     }
 }

@@ -379,6 +379,12 @@ namespace Shiny_Hunters_Companion
 
         }
 
+        public void Menu_ViewPokedex_Click(object sender, EventArgs e)
+        {
+            ShinyPokedex frm = new ShinyPokedex();
+            frm.ShowDialog();
+        }
+
         public void Menu_LogOut_Click(object sender, EventArgs e)
         {
             Program.CurrentUser = null;

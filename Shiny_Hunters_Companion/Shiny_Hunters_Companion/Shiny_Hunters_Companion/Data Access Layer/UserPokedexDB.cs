@@ -16,6 +16,10 @@ namespace Shiny_Hunters_Companion.Data_Access_Layer
         private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
         private OleDbConnection myConnection;
 
+        public UserPokedexDB()
+        {
+            myConnection = new OleDbConnection(connectionString);
+        }
         public HashSet<int> GetCaughtPokemonIDs(int userID)
         {
             HashSet<int> caughtIds = new HashSet<int>();
