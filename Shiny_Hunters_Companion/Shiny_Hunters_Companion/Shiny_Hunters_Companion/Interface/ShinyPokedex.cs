@@ -43,6 +43,11 @@ namespace Shiny_Hunters_Companion
                 card.BorderStyle = BorderStyle.FixedSingle;
                 card.Margin = new Padding(5);
 
+                if (!chkShowAll.Checked && !isCaught)
+                {
+                    continue;
+                }
+
                 if (isCaught)
                 {
                     card.BackColor = Color.White;
@@ -58,6 +63,8 @@ namespace Shiny_Hunters_Companion
                 check.Checked = isCaught;
                 check.Cursor = Cursors.Hand;
                 check.Tag = pokemon;
+                check.CheckedChanged += PokemonCheckBox_CheckedChanged;
+
 
                 Label lblID = new Label();
                 lblID.Text = "#" + pokemon.FormID.ToString("000");
@@ -100,6 +107,7 @@ namespace Shiny_Hunters_Companion
                 card.Controls.Add(lblID);
                 card.Controls.Add(sprite);
                 card.Controls.Add(lblName);
+                flowPanel.Controls.Add(card);
             }
             flowPanel.ResumeLayout();
         }
@@ -179,6 +187,11 @@ namespace Shiny_Hunters_Companion
            ShinyDexDetails detailsForm = new ShinyDexDetails();
               detailsForm.LoadPokemonByName(pokemonName);
             detailsForm.Show();
+        }
+
+        private void chkShowAll_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadPokedexInfo();
         }
     }
 }

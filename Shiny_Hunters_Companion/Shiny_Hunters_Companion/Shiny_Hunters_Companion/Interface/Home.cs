@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Shiny_Hunters_Companion.Data_Access_Layer;
 
 namespace Shiny_Hunters_Companion
 {
@@ -15,6 +16,7 @@ namespace Shiny_Hunters_Companion
         private PokemonDB pokemonDB = new PokemonDB();
         private MethodDB methodDB = new MethodDB();
         private GameDB gameDB = new GameDB();
+        private UserPokedexDB userPokedexDB = new UserPokedexDB();
 
         public Home()
         {
@@ -402,7 +404,7 @@ namespace Shiny_Hunters_Companion
             huntTimer.Stop();
             btnToggleTimer.Text = "▶";
             btnToggleTimer.BackColor = Color.LightGreen;
-
+            userPokedexDB.UpdateCaughtStatus(currentUser.UserID, activeHunt.FormID, true);
             huntDB.UpdateHuntCount(activeHunt.HuntID, activeHunt.EncounterCount, activeHunt.TotalTimeSeconds);
             huntDB.CompleteHunt(activeHunt.HuntID);
             MessageBox.Show("Hunt Saved to History!");
@@ -412,6 +414,11 @@ namespace Shiny_Hunters_Companion
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbAchievements_Enter(object sender, EventArgs e)
         {
 
         }

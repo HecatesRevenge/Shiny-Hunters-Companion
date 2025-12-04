@@ -75,7 +75,7 @@ namespace Shiny_Hunters_Companion
                 List<string> typeList = new List<string>();
                 foreach (var typeEntry in pokemon.types)
                 {
-                    typeList.Add(typeEntry.type.name);
+                    typeList.Add(typeEntry.type.name.ToUpper());
                 }
                 var typeNames = typeList.ToArray();
                 lblType.Text = "Type: " + string.Join(", ", typeNames);

@@ -62,13 +62,6 @@
             this.lblCurrentOdds = new System.Windows.Forms.Label();
             this.progProb = new System.Windows.Forms.ProgressBar();
             this.lblProbTitle = new System.Windows.Forms.Label();
-            this.grbAchievements = new System.Windows.Forms.GroupBox();
-            this.progAch3 = new System.Windows.Forms.ProgressBar();
-            this.lblAch3 = new System.Windows.Forms.Label();
-            this.progAch2 = new System.Windows.Forms.ProgressBar();
-            this.lblAch2 = new System.Windows.Forms.Label();
-            this.progAch1 = new System.Windows.Forms.ProgressBar();
-            this.lblAch1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
@@ -78,6 +71,7 @@
             this.startNewHuntToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewShinyPokedexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.grbActiveHunt.SuspendLayout();
             this.pnlTimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPokemonSprite)).BeginInit();
@@ -86,10 +80,10 @@
             this.grbMilestones.SuspendLayout();
             this.grbHuntPace.SuspendLayout();
             this.grpProb.SuspendLayout();
-            this.grbAchievements.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.dropDownMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -254,7 +248,7 @@
             this.grbStats.Controls.Add(this.lblTotalShinies);
             this.grbStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbStats.Location = new System.Drawing.Point(460, 80);
+            this.grbStats.Location = new System.Drawing.Point(460, 215);
             this.grbStats.Name = "grbStats";
             this.grbStats.Size = new System.Drawing.Size(600, 120);
             this.grbStats.TabIndex = 2;
@@ -289,7 +283,7 @@
             this.grbOdds.Controls.Add(this.grpProb);
             this.grbOdds.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbOdds.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbOdds.Location = new System.Drawing.Point(461, 220);
+            this.grbOdds.Location = new System.Drawing.Point(460, 350);
             this.grbOdds.Name = "grbOdds";
             this.grbOdds.Size = new System.Drawing.Size(600, 360);
             this.grbOdds.TabIndex = 3;
@@ -458,77 +452,6 @@
             this.lblProbTitle.TabIndex = 4;
             this.lblProbTitle.Text = "Probability:";
             // 
-            // grbAchievements
-            // 
-            this.grbAchievements.Controls.Add(this.progAch3);
-            this.grbAchievements.Controls.Add(this.lblAch3);
-            this.grbAchievements.Controls.Add(this.progAch2);
-            this.grbAchievements.Controls.Add(this.lblAch2);
-            this.grbAchievements.Controls.Add(this.progAch1);
-            this.grbAchievements.Controls.Add(this.lblAch1);
-            this.grbAchievements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grbAchievements.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbAchievements.Location = new System.Drawing.Point(460, 600);
-            this.grbAchievements.Name = "grbAchievements";
-            this.grbAchievements.Size = new System.Drawing.Size(600, 120);
-            this.grbAchievements.TabIndex = 4;
-            this.grbAchievements.TabStop = false;
-            this.grbAchievements.Text = "Achievements";
-            // 
-            // progAch3
-            // 
-            this.progAch3.Location = new System.Drawing.Point(222, 90);
-            this.progAch3.Name = "progAch3";
-            this.progAch3.Size = new System.Drawing.Size(200, 20);
-            this.progAch3.TabIndex = 9;
-            this.progAch3.Value = 66;
-            // 
-            // lblAch3
-            // 
-            this.lblAch3.AutoSize = true;
-            this.lblAch3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAch3.Location = new System.Drawing.Point(22, 90);
-            this.lblAch3.Name = "lblAch3";
-            this.lblAch3.Size = new System.Drawing.Size(163, 20);
-            this.lblAch3.TabIndex = 8;
-            this.lblAch3.Text = "Place Holder Achiev 2";
-            // 
-            // progAch2
-            // 
-            this.progAch2.Location = new System.Drawing.Point(220, 60);
-            this.progAch2.Name = "progAch2";
-            this.progAch2.Size = new System.Drawing.Size(200, 20);
-            this.progAch2.TabIndex = 7;
-            this.progAch2.Value = 66;
-            // 
-            // lblAch2
-            // 
-            this.lblAch2.AutoSize = true;
-            this.lblAch2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAch2.Location = new System.Drawing.Point(20, 60);
-            this.lblAch2.Name = "lblAch2";
-            this.lblAch2.Size = new System.Drawing.Size(195, 20);
-            this.lblAch2.TabIndex = 6;
-            this.lblAch2.Text = "Place Holder Achievement";
-            // 
-            // progAch1
-            // 
-            this.progAch1.Location = new System.Drawing.Point(220, 30);
-            this.progAch1.Name = "progAch1";
-            this.progAch1.Size = new System.Drawing.Size(200, 20);
-            this.progAch1.TabIndex = 5;
-            this.progAch1.Value = 66;
-            // 
-            // lblAch1
-            // 
-            this.lblAch1.AutoSize = true;
-            this.lblAch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAch1.Location = new System.Drawing.Point(20, 30);
-            this.lblAch1.Name = "lblAch1";
-            this.lblAch1.Size = new System.Drawing.Size(197, 20);
-            this.lblAch1.TabIndex = 4;
-            this.lblAch1.Text = "Hat Trick (Catch 3 Shinies)";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnMenu);
@@ -584,36 +507,46 @@
             this.viewShinyPokedexToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.dropDownMenu.Name = "dropDownMenu";
-            this.dropDownMenu.Size = new System.Drawing.Size(181, 92);
+            this.dropDownMenu.Size = new System.Drawing.Size(180, 70);
             // 
             // startNewHuntToolStripMenuItem
             // 
             this.startNewHuntToolStripMenuItem.Name = "startNewHuntToolStripMenuItem";
-            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.startNewHuntToolStripMenuItem.Text = "Start New Hunt";
             this.startNewHuntToolStripMenuItem.Click += new System.EventHandler(this.Menu_NewHunt_Click);
             // 
             // viewShinyPokedexToolStripMenuItem
             // 
             this.viewShinyPokedexToolStripMenuItem.Name = "viewShinyPokedexToolStripMenuItem";
-            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.viewShinyPokedexToolStripMenuItem.Text = "View Shiny Pokedex";
             this.viewShinyPokedexToolStripMenuItem.Click += new System.EventHandler(this.Menu_ViewPokedex_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.Menu_LogOut_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::Shiny_Hunters_Companion.Properties.Resources.LogoWithoutBackground;
+            this.pbLogo.Location = new System.Drawing.Point(460, 90);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(600, 119);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 4;
+            this.pbLogo.TabStop = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 721);
+            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.grbAchievements);
             this.Controls.Add(this.grbOdds);
             this.Controls.Add(this.grbStats);
             this.Controls.Add(this.grbActiveHunt);
@@ -636,12 +569,11 @@
             this.grbHuntPace.PerformLayout();
             this.grpProb.ResumeLayout(false);
             this.grpProb.PerformLayout();
-            this.grbAchievements.ResumeLayout(false);
-            this.grbAchievements.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.dropDownMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,7 +585,6 @@
         private System.Windows.Forms.GroupBox grbActiveHunt;
         private System.Windows.Forms.GroupBox grbStats;
         private System.Windows.Forms.GroupBox grbOdds;
-        private System.Windows.Forms.GroupBox grbAchievements;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picProfile;
         private System.Windows.Forms.Label lblTitle;
@@ -673,12 +604,6 @@
         private System.Windows.Forms.Label lblTotalEncounters;
         private System.Windows.Forms.Label lblCurrentOdds;
         private System.Windows.Forms.Label lblBaseOdds;
-        private System.Windows.Forms.Label lblAch1;
-        private System.Windows.Forms.ProgressBar progAch3;
-        private System.Windows.Forms.Label lblAch3;
-        private System.Windows.Forms.ProgressBar progAch2;
-        private System.Windows.Forms.Label lblAch2;
-        private System.Windows.Forms.ProgressBar progAch1;
         private System.Windows.Forms.ProgressBar progProb;
         private System.Windows.Forms.Label lblProbTitle;
         private System.Windows.Forms.GroupBox grpProb;
@@ -698,5 +623,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewShinyPokedexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Label lblGame;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

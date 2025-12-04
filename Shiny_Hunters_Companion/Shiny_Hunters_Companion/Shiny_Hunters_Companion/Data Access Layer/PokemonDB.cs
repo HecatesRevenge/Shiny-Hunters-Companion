@@ -105,8 +105,8 @@ namespace Shiny_Hunters_Companion
                 f.FormName,
                 f.DisplayName,
                 f.SpriteURL,
+                p.PokemonID,
                 p.PokedexNumber,
-                p.PokemonName,
                 p.BaseName
             FROM
                 tblPokemonForms AS f
