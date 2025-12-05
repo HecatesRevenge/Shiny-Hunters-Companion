@@ -17,6 +17,7 @@ namespace Shiny_Hunters_Companion
         public bool isActive { get; set; }
 
         public bool IsCompleted {  get; set; }
+        public DateTime? DateCaught{ get; set; }
         public List<PlayerModifier> ActiveModifiers { get; set;}
 
         public TimeSpan TotalTime

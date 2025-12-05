@@ -66,12 +66,13 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.huntTimer = new System.Windows.Forms.Timer(this.components);
             this.dropDownMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.startNewHuntToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewShinyPokedexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.picProfile = new System.Windows.Forms.PictureBox();
             this.picPokemonSprite = new System.Windows.Forms.PictureBox();
+            this.startNewHuntToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pastShinyHuntsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbActiveHunt.SuspendLayout();
             this.pnlTimer.SuspendLayout();
             this.grbStats.SuspendLayout();
@@ -484,28 +485,22 @@
             this.dropDownMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startNewHuntToolStripMenuItem,
             this.viewShinyPokedexToolStripMenuItem,
+            this.pastShinyHuntsToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.dropDownMenu.Name = "dropDownMenu";
-            this.dropDownMenu.Size = new System.Drawing.Size(180, 70);
-            // 
-            // startNewHuntToolStripMenuItem
-            // 
-            this.startNewHuntToolStripMenuItem.Name = "startNewHuntToolStripMenuItem";
-            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
-            this.startNewHuntToolStripMenuItem.Text = "Start New Hunt";
-            this.startNewHuntToolStripMenuItem.Click += new System.EventHandler(this.Menu_NewHunt_Click);
+            this.dropDownMenu.Size = new System.Drawing.Size(181, 114);
             // 
             // viewShinyPokedexToolStripMenuItem
             // 
             this.viewShinyPokedexToolStripMenuItem.Name = "viewShinyPokedexToolStripMenuItem";
-            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.viewShinyPokedexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewShinyPokedexToolStripMenuItem.Text = "View Shiny Pokedex";
             this.viewShinyPokedexToolStripMenuItem.Click += new System.EventHandler(this.Menu_ViewPokedex_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.Menu_LogOut_Click);
             // 
@@ -539,6 +534,20 @@
             this.picPokemonSprite.TabIndex = 0;
             this.picPokemonSprite.TabStop = false;
             this.picPokemonSprite.Click += new System.EventHandler(this.picPokemonSprite_Click);
+            // 
+            // startNewHuntToolStripMenuItem
+            // 
+            this.startNewHuntToolStripMenuItem.Name = "startNewHuntToolStripMenuItem";
+            this.startNewHuntToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startNewHuntToolStripMenuItem.Text = "Start New Hunt";
+            this.startNewHuntToolStripMenuItem.Click += new System.EventHandler(this.Menu_NewHunt_Click);
+            // 
+            // pastShinyHuntsToolStripMenuItem
+            // 
+            this.pastShinyHuntsToolStripMenuItem.Name = "pastShinyHuntsToolStripMenuItem";
+            this.pastShinyHuntsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pastShinyHuntsToolStripMenuItem.Text = "Past Shiny Hunts";
+            this.pastShinyHuntsToolStripMenuItem.Click += new System.EventHandler(this.Menu_PastHunts_Click);
             // 
             // Home
             // 
@@ -619,10 +628,11 @@
         private System.Windows.Forms.Label lblPercentile;
         private System.Windows.Forms.Timer huntTimer;
         private System.Windows.Forms.ContextMenuStrip dropDownMenu;
-        private System.Windows.Forms.ToolStripMenuItem startNewHuntToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewShinyPokedexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Label lblGame;
         private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.ToolStripMenuItem startNewHuntToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pastShinyHuntsToolStripMenuItem;
     }
 }

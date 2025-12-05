@@ -18,7 +18,7 @@ namespace Shiny_Hunters_Companion
 
         private Hunt GetHuntFromReader(OleDbDataReader reader)
         {
-            return new Hunt
+            Hunt hunt=new Hunt
             {
                 HuntID = Convert.ToInt32(reader["HuntID"]),
                 UserID = Convert.ToInt32(reader["UserID_FK"]),
@@ -27,9 +27,12 @@ namespace Shiny_Hunters_Companion
                 MethodID = Convert.ToInt32(reader["MethodID_FK"]),
                 EncounterCount = Convert.ToInt32(reader["EncounterCount"]),
                 TotalTimeSeconds = Convert.ToInt32(reader["TotalTimeSeconds"]),
-                isActive = Convert.ToBoolean(reader["isActive"])
-
+                isActive = Convert.ToBoolean(reader["isActive"]),
+                
             };
+            hunt.DateCaught = reader["DateCaught"] as DateTime?;
+            return hunt;
+
         }
 
         private List<Hunt> DatabaseSelectQuery(string query, Dictionary<string, object> parameters = null)
@@ -239,6 +242,7 @@ namespace Shiny_Hunters_Companion
                 {"@Active", newHunt.isActive }
             };
 
+
             return DataInsertWithTransaction(strSql, parameter, newHunt.ActiveModifiers);
         }
 
@@ -259,14 +263,31 @@ namespace Shiny_Hunters_Companion
         {
             string strSQL = @"
                 UPDATE tblHunts 
-                SET IsActive = False 
+                SET IsActive = False, DateCaught=@DateCaught
                 WHERE HuntID = @HuntID";
 
             var parameters = new Dictionary<string, object>
             {
-                { "@HuntID", huntID }
+                { "@Date", DateTime.Now.ToString()},
+                { "@HuntID", huntID },
+                
+
             };
             DatabaseNonQuery(strSQL, parameters);
+        }
+
+        public List<Hunt> GetCompletedHunts(int userID)
+        {
+            string strSQL = @"
+                SELECT *
+                FROM tblHunts
+                WHERE UserID_FK= @UserID AND IsActive=FALSE
+                ORDER BY HuntID DESC";
+            var parameters = new Dictionary<string, object> {
+                { "@UserID", userID } 
+            };
+
+            return DatabaseSelectQuery(strSQL, parameters);
         }
 
     }

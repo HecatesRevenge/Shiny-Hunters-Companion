@@ -23,6 +23,7 @@ namespace Shiny_Hunters_Companion
             InitializeComponent();
         }
 
+
         private void Home_Load(object sender, EventArgs e)
         {
             if (Program.CurrentUser == null)
@@ -391,6 +392,12 @@ namespace Shiny_Hunters_Companion
         {
             Program.CurrentUser = null;
             Application.Restart();
+        }
+
+        public void Menu_PastHunts_Click(object sender, EventArgs e)
+        {
+            PastHunts frm = new PastHunts();
+            frm.ShowDialog();
         }
 
         private void btnCaught_Click(object sender, EventArgs e)
