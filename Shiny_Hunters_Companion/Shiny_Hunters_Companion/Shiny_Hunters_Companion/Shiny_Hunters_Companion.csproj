@@ -55,7 +55,6 @@
   <ItemGroup>
     <Compile Include="API\PokeApiModels.cs" />
     <Compile Include="API\PokeApiService.cs" />
-    <Compile Include="Data Access Layer\AchievementDB.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGameMethods.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGameModifiers.cs" />
     <Compile Include="Data Access Layer\Database Seeders\SeedGames.cs" />

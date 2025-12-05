@@ -8,114 +8,77 @@ namespace Shiny_Hunters_Companion
 {
     public class GameDB
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\ShinyCompanion.accdb;";
         private OleDbConnection myConnection;
+        private OleDbDataAdapter myDataAdapter;
+        public DataSet GameDataSet { get; set; }
 
         public GameDB()
         {
-            myConnection = new OleDbConnection(connectionString);
-
+            GameDataSet = new DataSet("ShinyGameDB");
         }
 
-        private Game GetGameFromReader(OleDbDataReader reader)
+        private Game GetGameFromRow(DataRow row)
         {
             return new Game
             {
-                GameID = Convert.ToInt32(reader["GameID"]),
-                GameName = reader["GameName"].ToString(),
-                Generation = reader["Generation"].ToString(),
-                Platform = reader["platform"].ToString(),
-                RegionName = reader["RegionName"].ToString(),
-                ReleaseDate = Convert.ToDateTime(reader["ReleaseDate"]),
-                BoxArtURL = reader["BoxArtURL"].ToString()
+                GameID = Convert.ToInt32(row["GameID"]),
+                GameName = row["GameName"].ToString(),
+                Generation = row["Generation"].ToString(),
+                Platform = row["Platform"].ToString(),
+                RegionName = row["RegionName"].ToString(),
+                ReleaseDate = Convert.ToDateTime(row["ReleaseDate"]),
 
+                //Kept here incase I want to add this functionality later
+                BoxArtURL = row["BoxArtURL"] != DBNull.Value ? row["BoxArtURL"].ToString() : ""
             };
-
-
-        }
-
-        private List<Game> DatabaseSelectQuery(string query, Dictionary<string, object> parameters = null)
-        {
-            List<Game> results = new List<Game>();
-            try
-            {
-                if (myConnection.State != ConnectionState.Open)
-                {
-                    myConnection.Open();
-                }
-                using (OleDbCommand command = new OleDbCommand(query, myConnection))
-                {
-                    if (parameters != null)
-                    {
-                        foreach (var p in parameters)
-                        {
-                            command.Parameters.AddWithValue(p.Key, p.Value);
-                        }
-                    }
-                    using (OleDbDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            results.Add(GetGameFromReader(reader));
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database error: " + ex.Message);
-            }
-            finally
-            {
-                if (myConnection.State == ConnectionState.Open)
-                {
-                    myConnection.Close();
-                }
-            }
-            return results;
         }
 
         public List<Game> GetAllGames()
         {
-            string strSQL = @"
-                SELECT * 
-                FROM tblGames 
-                ORDER BY ReleaseDate";
-            return DatabaseSelectQuery(strSQL);
+            List<Game> results = new List<Game>();
+            myConnection = new OleDbConnection(connectionString);
+            string strSQL = "SELECT * FROM tblGames ORDER BY ReleaseDate";
+
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            DataTable gameTable = new DataTable();
+
+            myDataAdapter.Fill(gameTable);
+
+            foreach (DataRow row in gameTable.Rows)
+            {
+                results.Add(GetGameFromRow(row));
+            }
+
+            return results;
         }
 
         public Game GetGameDetails(int gameID)
         {
-            string strSQL = @"
-                SELECT * 
-                FROM tblGames 
-                WHERE GameID = @GameID";
-            var parameters = new Dictionary<string, object>
-            {
-                { "@GameID", gameID }
-            };
+            myConnection = new OleDbConnection(connectionString);
+            string strSQL = "SELECT * FROM tblGames"; 
 
-            List<Game> results = DatabaseSelectQuery(strSQL, parameters);
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            DataTable gameTable = new DataTable();
+            myDataAdapter.Fill(gameTable);
 
-            if (results.Count > 0)
+            foreach (DataRow row in gameTable.Rows)
             {
-                return results[0];
+                if (Convert.ToInt32(row["GameID"]) == gameID)
+                {
+                    return GetGameFromRow(row);
+                }
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
-
-       
-
-
-        }
-
-        //TODO: UpdateGameDetails with API call to update game details in the database
-
-
-
     }
+}
+    
+    
+    
+    
+    
 
+    
 
