@@ -9,287 +9,213 @@ namespace Shiny_Hunters_Companion
     public class HuntDB
     {
         private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
+
         private OleDbConnection myConnection;
+        private OleDbDataAdapter myDataAdapter;
+        private OleDbCommandBuilder myCommandBuilder;
+        private OleDbCommand myCommand;
+        public DataSet HuntDataSet { get; set; }
 
         public HuntDB()
         {
+            HuntDataSet = new DataSet("ShinyHuntDB");
             myConnection = new OleDbConnection(connectionString);
         }
 
-        private Hunt GetHuntFromReader(OleDbDataReader reader)
+        private Hunt GetHuntFromRow(DataRow row)
         {
-            Hunt hunt=new Hunt
+            Hunt hunt = new Hunt
             {
-                HuntID = Convert.ToInt32(reader["HuntID"]),
-                UserID = Convert.ToInt32(reader["UserID_FK"]),
-                GameID = Convert.ToInt32(reader["GameID_FK"]),
-                FormID = Convert.ToInt32(reader["FormID_FK"]),
-                MethodID = Convert.ToInt32(reader["MethodID_FK"]),
-                EncounterCount = Convert.ToInt32(reader["EncounterCount"]),
-                TotalTimeSeconds = Convert.ToInt32(reader["TotalTimeSeconds"]),
-                isActive = Convert.ToBoolean(reader["isActive"]),
-                
+                HuntID = Convert.ToInt32(row["HuntID"]),
+                UserID = Convert.ToInt32(row["UserID_FK"]),
+                GameID = Convert.ToInt32(row["GameID_FK"]),
+                FormID = Convert.ToInt32(row["FormID_FK"]),
+                MethodID = Convert.ToInt32(row["MethodID_FK"]),
+                EncounterCount = Convert.ToInt32(row["EncounterCount"]),
+                TotalTimeSeconds = Convert.ToInt32(row["TotalTimeSeconds"]),
+                isActive = Convert.ToBoolean(row["isActive"])
             };
-            hunt.DateCaught = reader["DateCaught"] as DateTime?;
+            if (row["DateCaught"] != DBNull.Value)
+            {
+                hunt.DateCaught = Convert.ToDateTime(row["DateCaught"]);
+            }
+
             return hunt;
-
-        }
-
-        private List<Hunt> DatabaseSelectQuery(string query, Dictionary<string, object> parameters = null)
-        {
-            List<Hunt> result = new List<Hunt>();
-            try
-            {
-                if (myConnection.State != ConnectionState.Open)
-                {
-                    myConnection.Open();
-                }
-
-                using (OleDbCommand command = new OleDbCommand(query, myConnection))
-                {
-                    if (parameters != null)
-                    {
-                        foreach (var p in parameters)
-                        {
-                            command.Parameters.AddWithValue(p.Key, p.Value);
-                        }
-                    }
-                    using (OleDbDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            result.Add(GetHuntFromReader(reader));
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database error (HuntDB: " + ex.Message);
-            }
-            finally
-            {
-                if (myConnection.State == ConnectionState.Open)
-                {
-                    myConnection.Close();
-                }
-            }
-            return result;
-        }
-
-        private int DatabaseNonQuery(string query, Dictionary<string, object> parameters = null)
-        {
-            int rows = 0;
-
-            try
-            {
-                if (myConnection.State != ConnectionState.Open)
-                {
-                    myConnection.Open();
-                }
-                using (OleDbCommand command = new OleDbCommand(query, myConnection))
-                {
-                    if (parameters != null)
-                    {
-                        foreach (var p in parameters)
-                        {
-                            command.Parameters.AddWithValue(p.Key, p.Value);
-                        }
-                    }
-                    rows = command.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database error (HuntDB: " + ex.Message);
-            }
-            finally
-            {
-                if (myConnection.State == ConnectionState.Open)
-                {
-                    myConnection.Close();
-                }
-            }
-            return rows;
-        }
-
-        private int DataInsertWithTransaction(string insertSQL, Dictionary<string, object> parameters, List<PlayerModifier> modifiers)
-        {
-            {
-                int newID = -1;
-                try
-                {
-                    if (myConnection.State != ConnectionState.Open)
-                    {
-                        myConnection.Open();
-                    }
-                    using (OleDbTransaction trans = myConnection.BeginTransaction())
-                    {
-                        try
-                        {
-                            using (OleDbCommand command = new OleDbCommand(insertSQL, myConnection, trans))
-                            {
-                                if (parameters != null)
-                                {
-                                    foreach (var p in parameters)
-                                    {
-                                        command.Parameters.AddWithValue(p.Key, p.Value);
-                                    }
-                                }
-
-
-                                command.ExecuteNonQuery();
-                              
-
-                                command.CommandText = "SELECT @@IDENTITY";
-                                command.Parameters.Clear();
-                                newID = (int)command.ExecuteScalar();
-                            }
-
-                            if (modifiers != null && modifiers.Count > 0)
-
-                                if (modifiers != null && modifiers.Count > 0)
-                            {
-                                string modifierSQL = "INSERT INTO tblHuntModifiers (HuntID_FK, ModifierID_FK) VALUES (@HuntID, @ModID)";
-                                using (OleDbCommand modifierCommand = new OleDbCommand(modifierSQL, myConnection, trans))
-                                {
-                                    foreach (var m in modifiers)
-                                    {
-                                        modifierCommand.Parameters.Clear();
-                                        modifierCommand.Parameters.AddWithValue("@HuntID", newID);
-                                        modifierCommand.Parameters.AddWithValue("@ModID", m.ModifierID);
-                                        modifierCommand.ExecuteNonQuery();
-                                    }
-                                }
-                            }
-                            trans.Commit();
-                        }
-                        catch (Exception ex)
-                        {
-                            trans.Rollback();
-                            throw;
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error inserting record: " + ex.Message);
-                    return -1;
-                }
-                finally
-                {
-                    if (myConnection.State == ConnectionState.Open)
-                    {
-                        myConnection.Close();
-                    }
-                }
-                return newID;
-            }
         }
 
         public List<Hunt> GetActiveHunts(int userID)
         {
-            string strSQL = @"
-                SELECT *
-                FROM tblHunts
-                WHERE UserID_FK= @UserID AND IsActive=TRUE
-                ORDER BY HuntID DESC";
-            //Make sure this format is something I can use
-            var parameters = new Dictionary<string, object> { { "UserID", userID } };
-            return DatabaseSelectQuery(strSQL, parameters);
+            List<Hunt> activeHunts = new List<Hunt>();
+
+            string strSQL = "SELECT * FROM tblHunts ORDER BY HuntID DESC";
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+
+
+            DataTable dataHunts = new DataTable();
+            myDataAdapter.Fill(dataHunts);
+
+            foreach (DataRow row in dataHunts.Rows)
+            {
+                if ((Convert.ToInt32(row["UserID_FK"]) == userID) && (Convert.ToBoolean(row["isActive"]) == true))
+                {
+                    activeHunts.Add(GetHuntFromRow(row));
+                }
+            }
+
+
+            return activeHunts;
+        }
+
+        public List<Hunt> GetCompletedHunts(int userID)
+        {
+            List<Hunt> completedHunts = new List<Hunt>();
+            myConnection = new OleDbConnection(connectionString);
+
+            string strSQL = "SELECT * FROM tblHunts ORDER BY HuntID DESC";
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+
+            DataTable dataHunts = new DataTable();
+            myDataAdapter.Fill(dataHunts);
+
+            foreach (DataRow row in dataHunts.Rows)
+            {
+                if ((Convert.ToInt32(row["UserID_FK"]) == userID) && (Convert.ToBoolean(row["isActive"]) == false))
+                {
+                    completedHunts.Add(GetHuntFromRow(row));
+                }
+            }
+
+            return completedHunts;
         }
 
         public Hunt GetHunt(int huntID)
         {
-            string strSQL = @"
-                SELECT *
-                FROM tblHunts
-                WHERE HuntID=@HuntID";
-            var parameters = new Dictionary<string, object> { { "@HuntID", huntID } };
-            List<Hunt> results = DatabaseSelectQuery(strSQL, parameters);
+            myConnection = new OleDbConnection(connectionString);
+            string strSQL = "SELECT * FROM tblHunts";
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
 
-            if (results.Count > 0)
+            DataTable dataHunts = new DataTable();
+            myDataAdapter.Fill(dataHunts);
+
+            foreach (DataRow row in dataHunts.Rows)
             {
-                return results[0];
+                if (Convert.ToInt32(row["HuntID"]) == huntID)
+                {
+                    return GetHuntFromRow(row);
+                }
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
 
         public List<PlayerModifier> GetModifiersForHunt(int huntID)
         {
-            ModifierDB modifierDB=new ModifierDB();
+            ModifierDB modifierDB = new ModifierDB();
             return modifierDB.GetModifiersByHunt(huntID);
         }
 
         public int CreateHunt(Hunt newHunt)
         {
-            string strSql = @"
-                INSERT INTO tblHunts 
-                (UserID_FK, GameID_FK, FormID_FK, MethodID_FK, EncounterCount, TotalTimeSeconds, IsActive) 
-                 VALUES (@UserID, @GameID, @FormID, @MethodID, @Count, @Time, @Active)
-                ";
-            var parameter = new Dictionary<string, object> {
-                {"@UserID",newHunt.UserID},
-                {"@GameID", newHunt.GameID },
-                {"@FormID", newHunt.FormID},
-                {"@MethodID", newHunt.MethodID},
-                {"@Count", newHunt.EncounterCount},
-                {"@Time", newHunt.TotalTimeSeconds},
-                {"@Active", newHunt.isActive }
-            };
+            myConnection = new OleDbConnection(connectionString);
+            myConnection.Open();
 
+            string strSQL = "SELECT * FROM tblHunts";
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            myCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
+            myCommandBuilder.QuotePrefix = "[";
+            myCommandBuilder.QuoteSuffix = "]";
 
-            return DataInsertWithTransaction(strSql, parameter, newHunt.ActiveModifiers);
+            DataSet tempData = new DataSet();
+            myDataAdapter.Fill(tempData, "tblHunts");
+            DataTable huntTable = tempData.Tables["tblHunts"];
+
+            DataRow newRow = huntTable.NewRow();
+            newRow["UserID_FK"] = newHunt.UserID;
+            newRow["GameID_FK"] = newHunt.GameID;
+            newRow["FormID_FK"] = newHunt.FormID;
+            newRow["MethodID_FK"] = newHunt.MethodID;
+            newRow["EncounterCount"] = newHunt.EncounterCount;
+            newRow["TotalTimeSeconds"] = newHunt.TotalTimeSeconds;
+            newRow["isActive"] = newHunt.isActive;
+
+            huntTable.Rows.Add(newRow);
+
+            myDataAdapter.Update(tempData, "tblHunts");
+
+            string strID = "SELECT MAX(HuntID) FROM tblHunts";
+            myCommand = new OleDbCommand(strID, myConnection);
+            int newHuntID = Convert.ToInt32(myCommand.ExecuteScalar());
+
+            if ((newHunt.ActiveModifiers != null) && (newHunt.ActiveModifiers.Count > 0))
+            {
+                string strModSQL = "SELECT * FROM tblHuntModifiers";
+                OleDbDataAdapter modifyAdapter = new OleDbDataAdapter(strModSQL, myConnection);
+                OleDbCommandBuilder modifyBuilder = new OleDbCommandBuilder(modifyAdapter);
+                modifyBuilder.QuotePrefix = "[";
+                modifyBuilder.QuoteSuffix = "]";
+
+                DataSet modifyDataSet = new DataSet();
+                modifyAdapter.Fill(modifyDataSet, "tblHuntModifiers");
+                DataTable modTable = modifyDataSet.Tables["tblHuntModifiers"];
+
+                foreach (var mod in newHunt.ActiveModifiers)
+                {
+                    DataRow modRow = modTable.NewRow();
+                    modRow["HuntID_FK"] = newHuntID;
+                    modRow["ModifierID_FK"] = mod.ModifierID;
+                    modTable.Rows.Add(modRow);
+                }
+                modifyAdapter.Update(modifyDataSet, "tblHuntModifiers");
+            }
+
+            myConnection.Close();
+            return newHuntID;
         }
 
         public void UpdateHuntCount(int huntID, int count, int time)
         {
-            string strSQL = @"
-                UPDATE tblHunts
-                SET EncounterCount=@Count, TotalTimeSeconds=@Time WHERE HuntID=@HuntID";
-            var parameters = new Dictionary<string, object> {
-                {"@Count", count },
-                {"@Time", time},
-                {"@HuntID", huntID }
-            };
-            DatabaseNonQuery(strSQL, parameters);
+            myConnection = new OleDbConnection(connectionString);
+            string strSQL = "SELECT * FROM tblHunts";
+
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            myCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
+
+            DataTable dataTable = new DataTable();
+            myDataAdapter.Fill(dataTable);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                if (Convert.ToInt32(row["HuntID"]) == huntID)
+                {
+                    row["EncounterCount"] = count;
+                    row["TotalTimeSeconds"] = time;
+                    break; 
+                }
+            }
+            myDataAdapter.Update(dataTable);
         }
 
         public void CompleteHunt(int huntID)
         {
-            string strSQL = @"
-                UPDATE tblHunts 
-                SET IsActive = False, DateCaught=@DateCaught
-                WHERE HuntID = @HuntID";
+            myConnection = new OleDbConnection(connectionString);
+            string strSQL = "SELECT * FROM tblHunts";
 
-            var parameters = new Dictionary<string, object>
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            myCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
+
+            DataTable dataTable = new DataTable();
+            myDataAdapter.Fill(dataTable);
+
+            foreach (DataRow row in dataTable.Rows)
             {
-                { "@Date", DateTime.Now.ToString()},
-                { "@HuntID", huntID },
-                
-
-            };
-            DatabaseNonQuery(strSQL, parameters);
+                if (Convert.ToInt32(row["HuntID"]) == huntID)
+                {
+                    row["isActive"] = false;
+                    row["DateCaught"] = DateTime.Now;
+                    break;
+                }
+            }
+            myDataAdapter.Update(dataTable);
         }
-
-        public List<Hunt> GetCompletedHunts(int userID)
-        {
-            string strSQL = @"
-                SELECT *
-                FROM tblHunts
-                WHERE UserID_FK= @UserID AND IsActive=FALSE
-                ORDER BY HuntID DESC";
-            var parameters = new Dictionary<string, object> {
-                { "@UserID", userID } 
-            };
-
-            return DatabaseSelectQuery(strSQL, parameters);
-        }
-
     }
-
 }
+        
