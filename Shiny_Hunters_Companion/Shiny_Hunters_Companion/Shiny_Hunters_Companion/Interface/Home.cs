@@ -62,7 +62,8 @@ namespace Shiny_Hunters_Companion
                 PokemonForm pokemonForm = pokemonDB.GetPokemonFormByID(activeHunt.FormID);
                 lblTargetPokemon.Text = pokemonForm.DisplayName;
 
-                string methodName = methodDB.GetMethodName(activeHunt.FormID);
+
+                string methodName = methodDB.GetMethodName(activeHunt.MethodID);
                 lblMethod.Text = "Method: " + methodName;
                 //TODO look over this later
                 lblEncounters.Text = activeHunt.EncounterCount.ToString("N0");

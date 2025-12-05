@@ -9,78 +9,67 @@ using System.Windows.Forms;
 
 namespace Shiny_Hunters_Companion
 {
+    //This class helps add and remove shiny hunting methods but isnt used elsewhere
     public class GameMethodDB
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\ShinyCompanion.accdb;";
         private OleDbConnection myConnection;
+        private OleDbDataAdapter myDataAdapter;
+        private OleDbCommandBuilder myCommandBuilder;
 
-        public GameMethodDB() {
-            myConnection=new OleDbConnection(connectionString);
+        public DataSet GameMethodDataSet { get; set; }
+
+        public GameMethodDB()
+        {
+            GameMethodDataSet = new DataSet("ShinyGameMethodDB");
+            myConnection = new OleDbConnection(connectionString);
         }
 
-        private int DatabaseNonQuery(string query, Dictionary<string, object> parameters = null)
+        public void AddMethodToGame(int gameID, int methodID)
         {
-            int rows = 0;
-            try
-            {
-                if (myConnection.State != ConnectionState.Open) myConnection.Open();
+            string strSQL = "SELECT * FROM tblGameMethods";
 
-                using (OleDbCommand command = new OleDbCommand(query, myConnection))
-                {
-                    if (parameters != null)
-                    {
-                        foreach (var p in parameters) command.Parameters.AddWithValue(p.Key, p.Value);
-                    }
-                    rows = command.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database error (GameMethodDB): " + ex.Message);
-                return -1;
-            }
-            finally
-            {
-                if (myConnection.State == ConnectionState.Open) myConnection.Close();
-            }
-            return rows;
-        }
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            myCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
 
-        private void AddMethodToGame(int gameID, int methodID)
-        {
-            string strSQL = "INSERT INTO tblGameMethods (GameID_FK, MethodID_FK) VALUES (@GameID, @MethodID)";
+            myCommandBuilder.QuotePrefix = "[";
+            myCommandBuilder.QuoteSuffix = "]";
 
-            var parameters = new Dictionary<string, object>
-            {
-                {"@GameID", gameID },
-                {"@MethodID", methodID }
-            };
+            DataSet tempDataSet = new DataSet();
+            myDataAdapter.Fill(tempDataSet, "tblGameMethods");
+            DataTable table = tempDataSet.Tables["tblGameMethods"];
 
-            DatabaseNonQuery(strSQL, parameters);
+            DataRow newRow = table.NewRow();
+            newRow["GameID_FK"] = gameID;
+            newRow["MethodID_FK"] = methodID;
+
+            table.Rows.Add(newRow);
+
+            myDataAdapter.Update(tempDataSet, "tblGameMethods");
         }
 
         public void RemoveMethodFromGame(int gameID, int methodID)
         {
-            string strSQL = "DELETE FROM tblGameMethods WHERE GameID_FK = @GameID AND MethodID_FK = @MethodID";
+            myConnection = new OleDbConnection(connectionString);
+            string strSQL = "SELECT * FROM tblGameMethods";
 
-            var parameters = new Dictionary<string, object>
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            myCommandBuilder = new OleDbCommandBuilder(myDataAdapter);
+
+            DataTable table = new DataTable();
+            myDataAdapter.Fill(table);
+
+            for (int i = table.Rows.Count - 1; i >= 0; i--)
             {
-                { "@GameID", gameID },
-                { "@MethodID", methodID }
-            };
+                DataRow row = table.Rows[i];
+                if (Convert.ToInt32(row["GameID_FK"]) == gameID && Convert.ToInt32(row["MethodID_FK"]) == methodID)
+                {
+                    row.Delete();
+                }
+            }
 
-            DatabaseNonQuery(strSQL, parameters);
+            myDataAdapter.Update(table);
         }
-
-        public void ClearMethodsForGame(int gameID)
-        {
-            string strSQL = "DELETE FROM tblGameMethods WHERE GameID_FK = @GameID";
-            var parameters = new Dictionary<string, object> {
-                { "@GameID", gameID }
-            };
-            DatabaseNonQuery(strSQL, parameters);
-        }
-
     }
 
 }

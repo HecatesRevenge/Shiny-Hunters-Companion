@@ -8,130 +8,102 @@ namespace Shiny_Hunters_Companion
 {
     public class MethodDB
     {
-        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ShinyCompanion.accdb;";
+        private string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\ShinyCompanion.accdb;";
         private OleDbConnection myConnection;
+        private OleDbDataAdapter myDataAdapter;
+        public DataSet MethodDataSet { get; set; }
+
         public MethodDB()
         {
+            MethodDataSet = new DataSet("ShinyMethodDB");
             myConnection = new OleDbConnection(connectionString);
         }
 
-        private Method GetHuntMethodFromReader(OleDbDataReader reader)
+        private Method GetMethodFromRow(DataRow row)
         {
             return new Method
             {
-                MethodID = Convert.ToInt32(reader["MethodID"]),
-                MethodName = reader["MethodName"].ToString(),
-                BaseOdds = Convert.ToInt32(reader["BaseOdds"]),
-                OddsModifier = Convert.ToInt32(reader["OddsModifier"]),
-                Description = reader["Description"].ToString(),
-
+                MethodID = Convert.ToInt32(row["MethodID"]),
+                MethodName = row["MethodName"].ToString(),
+                BaseOdds = Convert.ToInt32(row["BaseOdds"]),
+                OddsModifier = Convert.ToInt32(row["OddsModifier"]),
+                Description = row["Description"].ToString()
             };
-
-        }
-
-        private List<Method> DatabaseSelectQuery(string query, Dictionary<string, object> parameters = null)
-        {
-            List<Method> results = new List<Method>();
-            try
-            {
-                if (myConnection.State != ConnectionState.Open)
-                {
-                    myConnection.Open();
-                }
-
-                using (OleDbCommand command = new OleDbCommand(query, myConnection))
-                {
-                    if (parameters != null)
-                    {
-                        foreach (var p in parameters)
-                        {
-                            command.Parameters.AddWithValue(p.Key, p.Value);
-                        }
-                    }
-
-                    using (OleDbDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            results.Add(GetHuntMethodFromReader(reader));
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database error (MethodDB): " + ex.Message);
-            }
-            finally
-            {
-                if (myConnection.State == ConnectionState.Open)
-                {
-                    myConnection.Close();
-                }
-            }
-            return results;
         }
 
         public List<Method> GetAllMethods()
         {
-            string strString = "SELECT * FROM tblMethods ORDER BY MethodName";
-            return DatabaseSelectQuery(strString);
+            List<Method> results = new List<Method>();
+            string strSQL = "SELECT * FROM tblMethods ORDER BY MethodName";
+
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            DataTable methodTable = new DataTable();
+
+            myDataAdapter.Fill(methodTable);
+
+            foreach (DataRow row in methodTable.Rows)
+            {
+                results.Add(GetMethodFromRow(row));
+            }
+
+            return results;
         }
 
         public List<Method> GetMethodsFromGame(int gameId)
         {
+            List<Method> results = new List<Method>();
+
             string strSQL = @"
                 SELECT m.* FROM tblMethods AS m
-                INNER JOIN tblGameMethods AS gm ON m.MethodID=gm.MethodID_FK
-                WHERE gm.GameID_FK=@GameID
+                INNER JOIN tblGameMethods AS gm ON m.MethodID = gm.MethodID_FK
+                WHERE gm.GameID_FK = @GameID
                 ORDER BY m.MethodName";
 
-            var parameters = new Dictionary<string, object>
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            myDataAdapter.SelectCommand.Parameters.AddWithValue("@GameID", gameId);
+
+            DataTable methodTable = new DataTable();
+            myDataAdapter.Fill(methodTable);
+
+            foreach (DataRow row in methodTable.Rows)
             {
-                {"@GameID", gameId }
-            };
+                results.Add(GetMethodFromRow(row));
+            }
 
-            return DatabaseSelectQuery(strSQL, parameters);
+            return results;
         }
-
         public Method GetMethodDetails(int methodID)
         {
-            string strSQL = "SELECT * FROM tblMethods WHERE MethodID=@MethodID";
 
-            var parameters = new Dictionary<string, object>
-            {
-                {"@MethodID", methodID},
-            };
-            List<Method> results = DatabaseSelectQuery(strSQL, parameters);
+            string strSQL = "SELECT * FROM tblMethods";
 
-            if (results.Count > 0)
+            myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
+            DataTable methodTable = new DataTable();
+            myDataAdapter.Fill(methodTable);
+
+            foreach (DataRow row in methodTable.Rows)
             {
-                return results[0];
+                if (Convert.ToInt32(row["MethodID"]) == methodID)
+                {
+                    return GetMethodFromRow(row);
+                }
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
 
         public string GetMethodName(int methodID)
         {
-            string resultName = "Unknow Method";
-            string strSQL = "SELECT MethodName FROM tblMethods WHERE MethodID";
+            Method method = GetMethodDetails(methodID);
 
-
-            OleDbConnection connection = new OleDbConnection(connectionString);
-            OleDbCommand command = new OleDbCommand(strSQL, connection);
-
-            command.Parameters.AddWithValue("@ID", methodID);
-            connection.Open();
-
-            object result = command.ExecuteScalar();
-            if (result != null)
+            if (method == null)
             {
-                resultName = result.ToString();
+                return "Unknown Method";
             }
-            return resultName;
+            else
+            {
+                return method.MethodName;
+            }
         }
     }
 }

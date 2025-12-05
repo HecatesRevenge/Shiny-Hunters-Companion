@@ -16,6 +16,8 @@ namespace Shiny_Hunters_Companion
         public GameDB()
         {
             GameDataSet = new DataSet("ShinyGameDB");
+            myConnection = new OleDbConnection(connectionString);
+
         }
 
         private Game GetGameFromRow(DataRow row)
@@ -37,7 +39,6 @@ namespace Shiny_Hunters_Companion
         public List<Game> GetAllGames()
         {
             List<Game> results = new List<Game>();
-            myConnection = new OleDbConnection(connectionString);
             string strSQL = "SELECT * FROM tblGames ORDER BY ReleaseDate";
 
             myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
@@ -55,7 +56,6 @@ namespace Shiny_Hunters_Companion
 
         public Game GetGameDetails(int gameID)
         {
-            myConnection = new OleDbConnection(connectionString);
             string strSQL = "SELECT * FROM tblGames"; 
 
             myDataAdapter = new OleDbDataAdapter(strSQL, myConnection);
